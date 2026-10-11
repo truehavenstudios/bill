@@ -573,6 +573,92 @@ details.phs .pt:first-of-type{border-top:0}
 .jpanel .lnk .ic{width:15px;height:15px;vertical-align:-2px;margin-right:4px}
 @media (max-width:1100px){.card.jar.open{display:flex;align-items:stretch}.card.jar.open .jx{margin-top:0}.card.jar.open .jpanels{padding-left:0;border-left:0;margin:18px 0 0}}
 @media (max-width:760px){.jartop{gap:16px}.ptot{gap:18px}}
+/* payday checklist */
+.pdwrap{display:flex;flex-direction:column;gap:14px;margin-bottom:24px}
+.card.payday{margin:0;border-color:color-mix(in srgb,var(--acc) 30%,var(--line))}
+.pdh{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
+.pdh h2{font-size:1.35rem;margin-top:4px}
+.pdn .smoney{font-size:2rem}
+.tfs{display:flex;flex-direction:column;margin-top:10px}
+.tf{display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid var(--line)}
+.tf:last-child{border-bottom:0}
+.tf .tick{width:28px;height:28px}
+.tf .nm{font-weight:500;display:flex;align-items:center;gap:6px}
+.tf .arr{width:15px;height:15px;color:var(--acc)}
+.tf.done .nm{color:var(--ink3)}
+.tf .amt{font-weight:500;white-space:nowrap}
+.tf.done .amt{color:var(--ink3)}
+.lnk2{border:0;background:none;padding:2px 0;font:inherit;cursor:pointer;color:var(--ink);border-bottom:1px dashed transparent}
+.lnk2:hover{border-bottom-color:var(--line2)}
+.tf.stay{color:var(--ink2)}
+.tf.stay .dot{width:28px;flex:none;display:flex;justify-content:center}
+.tf.stay .dot::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--line2)}
+.tf.stay .nm{font-weight:400}
+.pdf{align-items:center}
+.pdok,.pdmiss{display:flex;align-items:center;gap:10px;padding:12px 16px;border:1px solid var(--line);border-radius:14px;background:var(--card);font-size:.94rem}
+.pdmiss{flex-direction:column;align-items:stretch;gap:6px}
+.pdmiss .ic{width:16px;height:16px;vertical-align:-3px;color:var(--ink3)}
+.pdnexts{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.pdnext{display:flex;flex-direction:column;gap:4px}
+.pdnext .row{gap:12px}
+#payday .pdwrap{margin-bottom:8px}
+/* toolbar + the phone's + */
+.toolbar{display:flex;justify-content:flex-end;gap:10px;margin:-8px 0 14px}
+.tabplus{flex:none;width:52px;height:52px;margin:-20px 6px 0;border-radius:50%;border:0;background:var(--acc);color:var(--onacc);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+.tabplus .ic{width:24px;height:24px}
+.tabbar .tabplus{display:flex}
+@media (max-width:760px){.toolbar{display:none}}
+@media (min-width:761px){.tabplus{display:none}}
+/* surprise bill */
+.sxhead{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:10px}
+.sxhead .smoney{font-size:1.9rem}
+.sximpact p{margin:0 0 12px;padding-left:26px;text-indent:-26px}
+.sximpact .ic{width:18px;height:18px;vertical-align:-3px;margin-right:8px}
+.sxos{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:14px}
+.sxo{display:flex;gap:14px;align-items:center;padding:14px 16px;border-bottom:1px solid var(--line)}
+.sxo:last-child{border-bottom:0}
+.sxo .nm{font-weight:500;display:flex;align-items:center;flex-wrap:wrap;gap:6px}
+.sxo .res{margin-top:4px;display:flex}
+.sxo .res span{display:inline-flex;gap:5px;align-items:center}
+.sxo .res .ic{width:15px;height:15px}
+.stepper{display:inline-flex;align-items:center;gap:2px;border:1px solid var(--line2);border-radius:10px;padding:1px}
+.stepper .iconbtn{width:28px;height:28px;font-size:1.05rem;color:var(--ink)}
+.stepper .iconbtn[disabled]{opacity:.35}
+.stepper b{min-width:22px;text-align:center}
+.grid.tight{gap:0 14px;margin-bottom:0}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.g3{grid-template-columns:minmax(0,1fr)}.modal .g2{grid-template-columns:minmax(0,1fr)}}
+/* what if */
+.modal.wide{max-width:820px}
+.wichips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.wichip{display:inline-flex;align-items:center;gap:4px;padding:4px 4px 4px 12px;border-radius:999px;background:var(--bg2);border:1px solid var(--line);font-size:.9rem}
+.wichip .iconbtn{width:26px;height:26px}.wichip .iconbtn .ic{width:14px;height:14px}
+.wiadd{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:6px}
+.wiform{border:1px solid var(--line);border-radius:14px;padding:14px 16px 12px;margin-bottom:8px}
+.wicmp{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0 14px}
+.wic{border:1px solid var(--line);border-radius:14px;padding:12px 16px}
+.wic .lbl{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3)}
+.wiv{display:flex;align-items:baseline;gap:8px;margin:4px 0 2px}
+.wiv b{font-family:var(--serif);font-size:1.8rem;font-weight:500}
+.wiv .ic{width:16px;height:16px;align-self:center}
+.wid{font-size:.85rem;color:var(--ink3)}.wid.up{color:var(--bad)}.wid.dn{color:var(--ok)}
+.chart .m-bal2{stroke:var(--c1);stroke-width:2;stroke-dasharray:5 4;stroke-linejoin:round}
+.sw.dash{height:0;width:18px;border-top:2px dashed var(--c1);background:none;border-radius:0}
+.wihint{margin-bottom:14px}
+.wilink{margin-left:auto;white-space:nowrap}
+.cap .wilink{font-size:.88rem}
+/* what to say */
+.say{display:inline-flex;align-items:center;gap:5px;font-size:.84rem;margin-top:4px}
+.say .ic{width:14px;height:14px}
+.wsseg{margin-bottom:12px}
+.wst{width:100%;resize:vertical;min-height:190px;line-height:1.5;font:inherit;font-size:.95rem;padding:12px 14px}
+.sw.bal{height:2px;width:16px;border-radius:2px;background:var(--c3)}
+@media (min-width:1100px){.card.payday .tfs{display:grid;grid-template-columns:1fr 1fr;column-gap:44px}.card.payday .tf:last-child{border-bottom:1px solid var(--line)}}
+.tf{padding:8px 0}
+@media (max-width:760px){.wiadd .chip{height:32px;font-size:.84rem;padding:0 11px}.wiadd{gap:6px}}
+#payday .card.payday{border:0;padding:0;background:none;border-radius:0}
+#payday .pdwrap{margin-bottom:18px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+@media (max-width:760px){.wsseg{display:grid;grid-template-columns:1fr 1fr;width:100%}.wsseg button{padding:8px 6px}}
 </style></head>
 <body><div id="root"></div>
 <script>window.BP_DEMO=true;window.BP_SHOP="https://www.etsy.com/shop/TrueHavenStudios";window.BP_VERSION="1.0.0";</script>
@@ -670,6 +756,10 @@ const E = (() => {
   }
   // paydays of one earner between from..to. e: {freq, next, semi:'1-15'|'15-last', day?}
   function payDates(e, from, to) {
+    const P = payDates0(e, from, to), off = e && e.off;
+    return off && off.length ? P.filter(d => !off.some(w => d >= w.from && d <= (w.to || "9999-12-31"))) : P;
+  }
+  function payDates0(e, from, to) {
     const s = e && e.next, out = [];
     if (!s || from > to) return out;
     const f = PAYF[e.freq] ? e.freq : "monthly";
@@ -696,7 +786,7 @@ const E = (() => {
     ers.forEach(e => { out[e.id] = 0; });
     if (mode === "one") { out[ers.some(e => e.id === sp.who) ? sp.who : ers[0].id] = 1; return out; }
     if (mode === "pct" && ers.length === 2) { const p = Math.max(0, Math.min(100, +sp.pct || 0)) / 100; out[ers[0].id] = p; out[ers[1].id] = 1 - p; return out; }
-    if (mode === "income") { const a = ers.map(annualPay), t = sum(a); if (t > 0 && a.every(x => x > 0)) { ers.forEach((e, i) => { out[e.id] = a[i] / t; }); return out; } }
+    if (mode === "income") { const a = ers.map(e => e.stopped ? 0 : annualPay(e)), t = sum(a); if (t > 0 && ers.every((e, i) => e.stopped || a[i] > 0)) { ers.forEach((e, i) => { out[e.id] = a[i] / t; }); return out; } }
     ers.forEach(e => { out[e.id] = 1 / ers.length; });
     return out;
   }
@@ -1181,10 +1271,10 @@ const E = (() => {
   function ics(st, today, fmtMoney = v => v.toFixed(2), stampTs = Date.now()) {
     const d = new Date(stampTs), stamp = `${d.getUTCFullYear()}${pad(d.getUTCMonth() + 1)}${pad(d.getUTCDate())}T${pad(d.getUTCHours())}${pad(d.getUTCMinutes())}${pad(d.getUTCSeconds())}Z`;
     const L = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//TrueHaven Studios//Bill Smoother//EN", "CALSCALE:GREGORIAN", "METHOD:PUBLISH", "X-WR-CALNAME:Bills"];
-    const ev = (uid, date, summary, desc, seq, alarm) => {
+    const ev = (uid, date, summary, desc, seq, alarm, trig = "-PT15H") => {
       L.push("BEGIN:VEVENT", `UID:${uid}`, `DTSTAMP:${stamp}`, `SEQUENCE:${seq}`, `DTSTART;VALUE=DATE:${icsDate(date)}`, `DTEND;VALUE=DATE:${icsDate(addDays(date, 1))}`,
         `SUMMARY:${icsEsc(summary)}`, `DESCRIPTION:${icsEsc(desc)}`, "TRANSP:TRANSPARENT",
-        "BEGIN:VALARM", "ACTION:DISPLAY", `DESCRIPTION:${icsEsc(alarm)}`, "TRIGGER:-PT15H", "END:VALARM", "END:VEVENT");   // the day before at 9:00
+        "BEGIN:VALARM", "ACTION:DISPLAY", `DESCRIPTION:${icsEsc(alarm)}`, `TRIGGER:${trig}`, "END:VALARM", "END:VEVENT");   // bills: the day before at 9:00
     };
     const to = addMonths(today, 12), from = addDays(today, -31);
     (st.bills || []).forEach(b => {
@@ -1192,6 +1282,11 @@ const E = (() => {
       all.forEach((date, i) => { if (date >= from) ev(uidOf(b, i), date, `${b.name} – ${fmtMoney(+b.amount || 0)}`, `Bill due: ${b.name}, ${fmtMoney(+b.amount || 0)}. Tick it in Bill Smoother once it's paid.`, seq, `${b.name} is due tomorrow`); });
       if (b.cancelBy && b.cancelBy >= from) ev(`${b.id}-cancel@billsmoother.truehaven`, b.cancelBy, `Cancel ${b.name}?`, `Last day to cancel ${b.name} before it renews.`, seq, `Last chance to cancel ${b.name} tomorrow`);
     });
+    // payday reminders (optional): the morning of each payday at 8:00, with what to move
+    if (st.settings && st.settings.payRemind) (st.earners || []).forEach(e => payDates(e, today, to).forEach(d => {
+      const v = rateAt(e, d), who = (st.earners || []).length > 1 ? e.name + "'s payday" : "Payday";
+      ev(`${e.id}-pay-${d}@billsmoother.truehaven`, d, `${who} – set aside ${fmtMoney(v)}`, `${who}: move ${fmtMoney(v)} to your bills money and jars. Open Bill Smoother to check off each transfer.`, 0, `${who} – set aside ${fmtMoney(v)}`, "PT8H");
+    }));
     (st.gone || []).forEach(g => { if (g.date >= from) L.push("BEGIN:VEVENT", `UID:${g.uid}`, `DTSTAMP:${stamp}`, `SEQUENCE:${g.seq}`, "STATUS:CANCELLED", `DTSTART;VALUE=DATE:${icsDate(g.date)}`, `DTEND;VALUE=DATE:${icsDate(addDays(g.date, 1))}`, `SUMMARY:${icsEsc("Cancelled: " + g.name)}`, "END:VEVENT"); });
     L.push("END:VCALENDAR");
     return L.map(fold).join("\r\n") + "\r\n";
@@ -1308,12 +1403,170 @@ const E = (() => {
     return m;
   }
 
+  // ------------------------------------------------------------ payday checklist
+  // the transfers for one payday of one person: the bills account part + each jar's fill. They add up to what's set aside.
+  const pdKey = (e, date) => e.id + "|" + date;
+  function payList(st, e, date, today) {
+    const rate = r2(rateAt(e, date)), jars = [];
+    (st.jars || []).forEach(j => {
+      const a = date <= today ? sum(jarLog(st, j, today).filter(l => l.kind === "fill" && l.date === date && l.e === e.id), l => l.amount)
+        : sum(jarSim(st, j, today, addDays(date, 1)).fills.filter(f => f.date === date && f.e === e.id), f => f.amount);
+      if (a > 0.004) jars.push({ key: j.id, kind: "jar", name: j.name, amount: r2(a) });
+    });
+    const toJars = r2(sum(jars, x => x.amount)), lines = [{ key: "acct", kind: "acct", name: "Bills account", amount: r2(Math.max(0, rate - toJars)) }, ...jars];
+    const rec = ((st.paydays || {})[pdKey(e, date)] || { lines: {} }).lines || {};
+    lines.forEach(l => { l.done = rec[l.key] !== undefined; l.moved = l.done ? rec[l.key] : null; });
+    const everyday = e.freq !== "irregular" && +e.pay > 0 ? r2(Math.max(0, +e.pay - rate)) : null;
+    return { e, date, rate, lines, everyday, done: lines.every(l => l.done || l.amount < 0.005) };
+  }
+  // the paydays to check off: from st.paySince (or 3 weeks back) to today, per person, not all done
+  function paydaysOpen(st, today) {
+    const from = max(st.paySince || today, addDays(today, -21)), out = [];
+    (st.earners || []).forEach(e => payDates(e, from, today).forEach(d => { const L = payList(st, e, d, today); if (!L.done) out.push(L); }));
+    return out.sort((a, b) => a.date < b.date ? 1 : -1);
+  }
+  // tick one transfer. Moved the planned amount: nothing changes (the payday already counts it). Moved a different sum:
+  // the difference is booked once, today, on the ledger it went to (a jar move counts in the bills money too)
+  function tickTransfer(st, e, date, key, moved, today, ts) {
+    if (date > today) return false;
+    const L = payList(st, e, date, today), l = L.lines.find(x => x.key === key); if (!l || l.done) return false;
+    st.paydays = st.paydays || {}; const k = pdKey(e, date), rec = st.paydays[k] = st.paydays[k] || { lines: {} };
+    const mv = moved == null ? l.amount : r2(Math.max(0, moved)), d = r2(mv - l.amount);
+    rec.lines[key] = mv; rec.ts = ts;
+    if (Math.abs(d) > 0.004) {
+      const h = { date: today, amount: d, ts, note: `Payday ${date.slice(5)}: moved ${mv.toFixed(2)} of ${l.amount.toFixed(2)}`, pd: k + "|" + key };
+      if (key === "acct") st.acct.history.push(h); else { const j = (st.jars || []).find(x => x.id === key); if (j) j.history.push(h); else st.acct.history.push(h); }
+    }
+    return true;
+  }
+  function untickTransfer(st, e, date, key, today, ts) {
+    const k = pdKey(e, date), rec = (st.paydays || {})[k]; if (!rec || rec.lines[key] === undefined) return false;
+    delete rec.lines[key]; if (!Object.keys(rec.lines).length) delete st.paydays[k];
+    const tag = k + "|" + key, j = (st.jars || []).find(x => (x.history || []).some(h => h.pd === tag));
+    if (j) editJarMove(st, j, j.history.findIndex(h => h.pd === tag), null, undefined, today, ts);
+    else { const i = (st.acct.history || []).findIndex(h => h.pd === tag); if (i >= 0) { const v = st.acct.history[i].amount; rebaseAll(st, today, ts); st.acct.history.splice(i, 1); st.acct.amount = r2(st.acct.amount - v); } }
+    return true;
+  }
+
+  // ------------------------------------------------------------ a surprise bill and how to cover it
+  const clone = o => JSON.parse(JSON.stringify(o));
+  // the next n paydays after today get +delta (the plan's catch-up, by hand); later paydays keep what they had
+  function bumpRates(e, n, delta, today) {
+    const P = payDates(e, addDays(today, 1), addMonths(today, HORIZON + 1)); if (!P.length || !(delta > 0)) return "";
+    setRates(e, P, P.map((d, i) => r2(rateAt(e, d) + (i < n ? delta : 0))));
+    return P[Math.min(n, P.length) - 1];
+  }
+  const onceBill = (x, ts, amount) => ({ id: "s" + ts.toString(36), name: String(x.name || "Surprise bill").slice(0, 60), amount: r2(amount), freq: "once", next: x.date, day: +x.date.slice(8), cat: x.cat || "other",
+    cancelBy: "", end: "", split: { mode: "shared" }, paid: {}, ts, seq: 0, gen: 0, prices: [], note: String(x.note || "").slice(0, 80) });
+  // spreading `amount` over n paychecks: per person by the household split
+  function spreadDeltas(st, amount, n) {
+    const sh = shares(st, { split: { mode: "shared" } }), out = {};
+    (st.earners || []).forEach(e => { out[e.id] = sh[e.id] > 0 ? ceil(amount * sh[e.id] / Math.max(1, n)) : 0; });
+    return out;
+  }
+  // what happens to the bills money (outside the jars) with the plan as committed: first short spot in 12 months
+  function crunch(st, today) { const M = model(st, today), pr = project(st, M, rateAt, addMonths(today, 12)), ep = pr.eps[0]; return ep ? { date: ep.lowDate, short: ep.short, line: pr.line } : { date: "", short: 0, line: pr.line }; }
+  // apply one way of covering it. how: covered | jar | spread | mix | everyday
+  function applySurprise(st, x, how, o, today, ts) {
+    o = o || {}; const amt = r2(+x.amount || 0), rec = { id: "x" + ts.toString(36), name: x.name, amount: amt, date: x.date, note: x.note || "", how, ts, made: today };
+    const j = o.jar ? (st.jars || []).find(y => y.id === o.jar) : null;
+    if (how === "jar" || how === "mix") {
+      if (!j) return null;
+      const have = jarSim(st, j, today, today).now, a = r2(Math.min(have, how === "jar" ? amt : +o.fromJar || 0));
+      if (a > 0) j.history.push({ date: today, amount: -a, ts, note: ("Surprise: " + x.name).slice(0, 60) });
+      rec.jar = j.id; rec.fromJar = a;
+      if (how === "jar" && amt - a > 0.004) st.bills.push(onceBill(x, ts + 1, amt - a));
+      if (how === "mix") { const rest = r2(amt - a); if (rest > 0.004) { st.bills.push(onceBill(x, ts + 1, rest)); const D = spreadDeltas(st, rest, o.n || 3); rec.deltas = D; rec.n = o.n || 3; st.earners.forEach(e => { const u = bumpRates(e, rec.n, D[e.id], today); if (u && (!rec.until || u > rec.until)) rec.until = u; }); } }
+    } else if (how === "spread") {
+      st.bills.push(onceBill(x, ts + 1, amt)); const n = o.n || 3, D = spreadDeltas(st, amt, n); rec.deltas = D; rec.n = n;
+      st.earners.forEach(e => { const u = bumpRates(e, n, D[e.id], today); if (u && (!rec.until || u > rec.until)) rec.until = u; });
+    } else if (how === "covered") st.bills.push(onceBill(x, ts + 1, amt));
+    (st.surprises = st.surprises || []).push(rec);
+    return rec;
+  }
+  // the options with their numbers, worked out on copies (the state isn't touched)
+  function rescue(st, x, today, n) {
+    const amt = r2(+x.amount || 0), ts = 9e15, out = { amount: amt, n };
+    const tryIt = (how, o) => { const c = clone(st), r = applySurprise(c, x, how, o, today, ts); return r ? { ...r, after: crunch(c, today) } : null; };
+    out.impact = tryIt("covered", {}).after; out.before = crunch(st, today);
+    out.covered = !out.impact.short || (out.before.short && out.impact.short <= out.before.short + 0.5);
+    const jars = (st.jars || []).map(j => ({ j, now: r2(jarSim(st, j, today, today).now) })).filter(y => y.now > 0.5).sort((a, b) => b.now - a.now);
+    const full = jars.find(y => y.now >= amt);
+    out.jar = full ? { ...tryIt("jar", { jar: full.j.id }), id: full.j.id, name: full.j.name, now: full.now } : null;
+    out.spread = tryIt("spread", { n });
+    const mj = jars[0];
+    if (mj && amt > 1) { const fromJar = r2(Math.min(mj.now, Math.round(amt / 2))); if (fromJar > 0 && fromJar < amt) out.mix = { ...tryIt("mix", { jar: mj.j.id, fromJar, n }), id: mj.j.id, name: mj.j.name, now: mj.now }; }
+    // a sensible default for n: the paychecks there are before it's due (at least 1, at most 12)
+    const P = (st.earners || []).map(e => payDates(e, addDays(today, 1), x.date).length);
+    out.nDue = Math.max(1, Math.min(12, P.length ? Math.max(...P) : 1));
+    return out;
+  }
+
+  // ------------------------------------------------------------ what if: try changes on a copy
+  // change: {t:'addBill', name, amount, freq, next} | {t:'dropBill', id} | {t:'moveBill', id, next} | {t:'pay', e, pay}
+  //       | {t:'off', e, months} (no pay for n months from the next payday) | {t:'stop', e} (stops working) | {t:'addJar', name, target, date}
+  function applyChanges(st, changes, today, ts) {
+    (changes || []).forEach((c, i) => {
+      const t = ts + i * 10, e = c.e && (st.earners || []).find(x => x.id === c.e), b = c.id && (st.bills || []).find(x => x.id === c.id);
+      if (c.t === "addBill" && +c.amount > 0 && okDate(c.next)) st.bills.push({ id: "w" + t.toString(36), name: String(c.name || "New bill").slice(0, 60), amount: r2(+c.amount), freq: BILLF[c.freq] ? c.freq : "monthly", next: c.next, day: +c.next.slice(8), cat: c.cat || "other", cancelBy: "", end: "", split: { mode: "shared" }, paid: {}, ts: t, seq: 0, gen: 0, prices: [] });
+      else if (c.t === "dropBill" && b) deleteBill(st, b.id, today, t, "keep");
+      else if (c.t === "moveBill" && b && okDate(c.next) && c.next >= today) editBill(st, b, { next: c.next }, today, t);
+      else if (c.t === "pay" && e && +c.pay >= 0) editEarner(st, e, { pay: r2(+c.pay) }, today, t);
+      else if (c.t === "off" && e && +c.months > 0) { const from = addDays(today, 1); editEarner(st, e, { off: (e.off || []).concat([{ from, to: addDays(addMonths(from, +c.months), -1) }]) }, today, t); }
+      else if (c.t === "stop" && e) editEarner(st, e, { off: (e.off || []).concat([{ from: addDays(today, 1), to: "" }]), stopped: true }, today, t);
+      else if (c.t === "addJar" && +c.target > 0) addJar(st, { id: "wj" + t.toString(36), name: String(c.name || "New jar").slice(0, 40), mode: okDate(c.date) && c.date > today ? "date" : "steady", target: r2(+c.target), date: okDate(c.date) ? c.date : "", per: okDate(c.date) && c.date > today ? 0 : Math.max(1, ceil(+c.target / 12)), freq: "yearly", bill: "", saved: 0, split: { mode: "shared" } }, today, t, true);
+    });
+    return st;
+  }
+  // side by side: the plan's number now vs with the changes, and the bills money with what's set aside today
+  function whatIf(st, changes, today, ts) {
+    const A = model(st, today), st2 = applyChanges(clone(st), changes, today, ts), B = model(st2, today), to = addMonths(today, 12);
+    const per = (st.earners || []).map(e => { const a = A.plan.earners.find(x => x.id === e.id), b = B.plan.earners.find(x => x.id === e.id);
+      return { id: e.id, name: e.name, now: rateAt(e, a ? a.next : today), plan: a ? a.first : 0, with: b ? b.first : 0, steadyNow: a ? a.steady : 0, steadyWith: b ? b.steady : 0 }; });
+    const pa = project(st, A, rateAt, to), pb = project(st2, B, rateAt, to);
+    return { per, lineNow: pa.line, lineWith: pb.line, epsNow: pa.eps, epsWith: pb.eps, gapWith: B.plan.gap, st2 };
+  }
+  // a crunch that moving one bill's due date to just after a payday removes
+  function moveHint(st, today) {
+    const M = model(st, today), fx = fixFor(st, M, 12); if (!fx || !fx.ep) return null;
+    const names = fx.ep.culprits || [], cands = (st.bills || []).filter(b => names.includes(b.name) && b.freq !== "once" && b.freq !== "weekly" && b.freq !== "biweekly" && (!b.end || b.end > today));
+    for (const b of cands) {
+      const d0 = occ(b, today, addMonths(today, 13)).find(d => d >= addDays(fx.ep.date || fx.ep.lowDate, -45) && d <= addDays(fx.ep.lowDate, 3)) || occ(b, today, addMonths(today, 13))[0]; if (!d0) continue;
+      // the day after each payday in the 6 weeks before that date
+      const days = [...new Set((st.earners || []).flatMap(e => payDates(e, addDays(d0, -42), addDays(d0, 20)).map(p => addDays(p, 1))))].filter(d => d > today && d !== d0 && +d.slice(8) <= 28).sort((a, b_) => Math.abs(diff(a, d0)) - Math.abs(diff(b_, d0))).slice(0, 4);
+      for (const nd of days) {
+        const c = clone(st), cb = c.bills.find(x => x.id === b.id); const shownNext = occ(cb, today, addMonths(today, 25))[0];
+        // move every date of the bill by the same number of days (keeps its rhythm)
+        const target = addDays(shownNext, diff(d0, nd)); if (target < today) continue;
+        editBill(c, cb, { next: target }, today, 9e15);
+        const M2 = model(c, today), f2 = fixFor(c, M2, 12);
+        if (!f2 || !f2.ep || f2.ep.lowDate > addDays(fx.ep.lowDate, 40)) return { id: b.id, name: b.name, day: +nd.slice(8), date: nd, next: target, removes: fx.ep.lowDate, short: fx.ep.short };
+      }
+    }
+    return null;
+  }
+
+  // ------------------------------------------------------------ what to say (subscriptions)
+  function scripts(b, today, f, dl) {
+    f = f || (v => v.toFixed(2)); dl = dl || (s => s);
+    const nx = occ(b, today, addMonths(today, 13))[0] || b.next, per = { weekly: "a week", biweekly: "every two weeks", monthly: "a month", bimonthly: "every two months", quarterly: "every three months", halfyearly: "every six months", yearly: "a year", once: "" }[b.freq] || "";
+    const r = priceRise(b), price = `${f(+b.amount || 0)}${per ? " " + per : ""}`;
+    return {
+      cancel: `Hello,\n\nPlease cancel my ${b.name} subscription (${price}) and stop all future payments. My next payment would be on ${dl(nx)} – please make sure it isn't charged.\n\nPlease confirm the cancellation in writing.\n\nThank you.`,
+      trial: `Hello,\n\nI'm on the free trial of ${String(b.name).replace(/\s+(free\s+)?trial$/i, "")} and don't want to continue. Please cancel it before it turns into a paid plan${b.cancelBy ? ` – the trial ends on ${dl(b.cancelBy)}` : ""}, so the first charge of ${price} on ${dl(nx)} never happens.\n\nPlease confirm by email.\n\nThank you.`,
+      price: `Hello,\n\nI've been paying ${price} for ${b.name}. That's more than I want to spend on it now, so I'm about to cancel.\n\nBefore I do: is there a lower price, a discount for staying or a cheaper plan you can offer me? Otherwise I'll cancel before my next payment on ${dl(nx)}.\n\nThank you.`,
+      rise: r ? `Hello,\n\nThe price of my ${b.name} subscription went up from ${f(r.from)} to ${f(+b.amount || 0)}${r.since ? ` on ${dl(r.since)}` : ""}. I didn't agree to a higher price.\n\nCould you keep me on ${f(r.from)}, or offer a cheaper plan? Otherwise I'll cancel before my next payment on ${dl(nx)}.\n\nThank you.`
+        : `Hello,\n\nI pay ${price} for ${b.name}. If the price goes up, I'd like to be told in advance and keep my current price – otherwise I'll cancel.\n\nCould you confirm my price stays at ${f(+b.amount || 0)}?\n\nThank you.`,
+      rose: !!r
+    };
+  }
+
   return { pad, ds, pd, okDate, addDays, diff, dim, addMonths, monthStart, monthEnd, ym, ymAdd, r2, sum, ceil, num, money,
     BILLF, PAYF, occ, payDates, perYear, perMonth, ppy, annualPay, shares, rateAt,
     tickTs, tickDay, isPaid, base, occInBase, occCounts, histInBase, histCounts,
     acct, jarSim, jarTarget, jarBill, jarCycles, smooth, phases, model, plan, breakdown, project, fixFor,
     rebaseAll, setRates, applyPlan, applyFix, priceChange, priceRise, ics, fold, yearDays, HORIZON,
-    editBill, editEarner, untick, addJar, jarLog, editJarMove, autoMoves, deleteBill, endBill, jarAsk, tombstone };
+    editBill, editEarner, untick, addJar, jarLog, editJarMove, autoMoves, payList, paydaysOpen, tickTransfer, untickTransfer, pdKey, bumpRates, spreadDeltas, crunch, applySurprise, rescue, applyChanges, whatIf, moveHint, scripts, clone, deleteBill, endBill, jarAsk, tombstone };
 })();
 if (typeof module !== "undefined") module.exports = E;
 
@@ -1374,6 +1627,16 @@ window.BP_SAMPLE = () => {
   jars[0].items = [it("Mia", "Lego Friends set", 85, true), it("Leo", "Puzzle 1000 pcs", 38, true, true), it("Mom", "Cashmere scarf", 120), it("Dad", "Record player", 180),
     it("Grandma", "Photo book", 45, true), it("Us", "Tree and decorations", 110)];
   jars[2].items = [it("", "Flights", 1100), it("", "Hotel, 7 nights", 980), it("", "Car rental", 260)];
+  // a surprise car repair three weeks ago, paid from the Emergency jar
+  jars[4].history.push({ date: E.addDays(t, -24), amount: -340, ts: ts0 + 2.2e9, note: "Surprise: Car repair" });
+  st.surprises = [{ id: "x1", name: "Car repair", amount: 340, date: E.addDays(t, -24), note: "New brake pads", how: "jar", jar: jars[4].id, fromJar: 340, ts: ts0 + 2.2e9, made: E.addDays(t, -24) }];
+  // the payday checklist: Sam's last payday fully checked off, today's payday half done
+  st.paySince = E.addDays(t, -10);
+  let q = ts0 + 6e9;
+  st.earners.forEach(e => E.payDates(e, st.paySince, t).forEach(d => {
+    const L = E.payList(st, e, d, t), keys = d === t ? L.lines.filter(l => l.amount > 0.004).slice(0, 2).map(l => l.key) : L.lines.map(l => l.key);
+    keys.forEach(k => E.tickTransfer(st, e, d, k, null, t, ++q));
+  }));
   return st;
 };
 
@@ -1399,8 +1662,8 @@ const PAYFREQ = { weekly: "Every week", biweekly: "Every 2 weeks", semimonthly: 
 function blank() {
   const t = today();
   return { v: 1, setup: false, created: t, planFrom: "", sample: false,
-    settings: { currency: "USD", dark: "auto", split: "income", lastBackup: "", theme: "navy" },
-    earners: [], bills: [], jars: [], gone: [], seen: {}, acct: { amount: 0, asOf: t, asTs: 0, edited: false, history: [] } };
+    settings: { currency: "USD", dark: "auto", split: "income", lastBackup: "", theme: "navy", payRemind: false },
+    earners: [], bills: [], jars: [], gone: [], seen: {}, paySince: t, paydays: {}, surprises: [], acct: { amount: 0, asOf: t, asTs: 0, edited: false, history: [] } };
 }
 let loadProblem = "";
 let S = load();
@@ -1432,25 +1695,30 @@ function migrate(s) {
   const okSplit = sp => sp && typeof sp === "object" && ["shared", "even", "pct", "income", "one"].includes(sp.mode) ? { mode: sp.mode, pct: clamp(fin(sp.pct), 0, 100), who: String(sp.who || "") } : { mode: "shared" };
   out.earners = out.earners.filter(e => ok(e.next)).slice(0, 2).map(e => ({ id: String(e.id || uid()), name: String(e.name || "You").slice(0, 30), freq: E.PAYF[e.freq] ? e.freq : "monthly", next: e.next,
     semi: e.semi === "15-last" ? "15-last" : "1-15", day: clamp(+e.day || +e.next.slice(8), 1, 31), pay: Math.max(0, fin(e.pay)), ts: +e.ts || 0,
+    off: (Array.isArray(e.off) ? e.off : []).filter(w => w && ok(w.from) && (!w.to || ok(w.to))).map(w => ({ from: w.from, to: w.to || "" })), stopped: !!e.stopped,
     rates: (Array.isArray(e.rates) ? e.rates : []).filter(r => r && ok(r.from) && isFinite(+r.amount)).map(r => ({ from: r.from, amount: Math.max(0, E.r2(+r.amount)) })).sort((x, y) => x.from < y.from ? -1 : 1) }));
   const paid = p => { const o = {}; if (p && typeof p === "object") for (const [d, v] of Object.entries(p)) { if (!ok(d)) continue; if (typeof v === "number" && v > 1) o[d] = { ts: v, day: d }; else if (v && +v.ts > 1) o[d] = { ts: +v.ts, day: ok(v.day) ? v.day : d }; } return o; };
   out.bills = out.bills.filter(x => ok(x.next) && isFinite(+x.amount)).map(x => ({ id: String(x.id || uid()), name: String(x.name || "Bill").slice(0, 60), amount: Math.max(0, E.r2(+x.amount)),
     freq: E.BILLF[x.freq] ? x.freq : "monthly", next: x.next, day: clamp(+x.day || +x.next.slice(8), 1, 31), cat: CATS.some(c => c.id === x.cat) ? x.cat : "other",
     cancelBy: ok(x.cancelBy) ? x.cancelBy : "", end: ok(x.end) ? x.end : "", split: okSplit(x.split), paid: paid(x.paid), ts: +x.ts || 0, seq: +x.seq || 0, gen: +x.gen || 0,
-    prices: (Array.isArray(x.prices) ? x.prices : []).filter(p => p && ok(p.date) && isFinite(+p.from) && isFinite(+p.to)) }));
+    prices: (Array.isArray(x.prices) ? x.prices : []).filter(p => p && ok(p.date) && isFinite(+p.from) && isFinite(+p.to)), note: String(x.note || "").slice(0, 80) }));
   out.jars = out.jars.filter(j => isFinite(+j.target) || j.bill).map(j => {
     const mode = ["date", "repeat", "steady", "bill"].includes(j.mode) ? j.mode : "steady";
     return { id: String(j.id || uid()), name: String(j.name || "Jar").slice(0, 40), mode, target: Math.max(0, fin(j.target)), date: ok(j.date) ? j.date : "", freq: ["yearly", "halfyearly", "quarterly"].includes(j.freq) ? j.freq : "yearly",
       per: Math.max(0, fin(j.per)), bill: mode === "bill" && out.bills.some(b => b.id === j.bill) ? j.bill : "", saved: Math.max(0, fin(j.saved)), asOf: ok(j.asOf) ? j.asOf : t,
       asTs: +j.asTs || 0, edited: j.edited !== false, created: ok(j.created) ? j.created : t, split: okSplit(j.split), ts: +j.ts || 0, kept: j.kept && typeof j.kept === "object" ? j.kept : {},
-      history: (Array.isArray(j.history) ? j.history : []).filter(h => h && ok(h.date) && isFinite(+h.amount)).map(h => ({ date: h.date, amount: E.r2(+h.amount), ts: +h.ts || 0, note: String(h.note || "") })),
+      history: (Array.isArray(j.history) ? j.history : []).filter(h => h && ok(h.date) && isFinite(+h.amount)).map(h => ({ date: h.date, amount: E.r2(+h.amount), ts: +h.ts || 0, note: String(h.note || ""), ...(h.pd ? { pd: String(h.pd) } : {}) })),
       log: (Array.isArray(j.log) ? j.log : []).filter(l => l && ok(l.date) && isFinite(+l.amount) && ["start", "fill", "pay", "adjust"].includes(l.kind)).map(l => ({ kind: l.kind, date: l.date, amount: E.r2(+l.amount), e: String(l.e || ""), bill: String(l.bill || ""), due: ok(l.due) ? l.due : "" })).slice(-600),
       items: (Array.isArray(j.items) ? j.items : []).filter(x => x && (x.what || x.who)).map(x => ({ id: String(x.id || uid()), who: String(x.who || "").slice(0, 40), what: String(x.what || "").slice(0, 60), price: Math.max(0, fin(x.price)), bought: !!x.bought, spent: +x.spent || 0 })).slice(0, 200) };
   }).map(j => j.mode === "bill" && !j.bill ? { ...j, mode: "steady" } : j).map(j => (j.mode === "date" || j.mode === "repeat") && !j.date ? { ...j, mode: "steady" } : j);
   const a = out.acct;
   out.gone = out.gone.filter(g => typeof g.uid === "string" && ok(g.date)).slice(-400);
   out.acct = { amount: fin(a.amount), asOf: ok(a.asOf) ? a.asOf : out.created, asTs: +a.asTs || 0, typedTs: +a.typedTs || 0, edited: a.edited !== false,
-    history: (Array.isArray(a.history) ? a.history : []).filter(h => h && ok(h.date) && isFinite(+h.amount)).map(h => ({ date: h.date, amount: E.r2(+h.amount), ts: +h.ts || 0, note: String(h.note || "") })) };
+    history: (Array.isArray(a.history) ? a.history : []).filter(h => h && ok(h.date) && isFinite(+h.amount)).map(h => ({ date: h.date, amount: E.r2(+h.amount), ts: +h.ts || 0, note: String(h.note || ""), ...(h.pd ? { pd: String(h.pd) } : {}) })) };
+  out.paySince = ok(s.paySince) ? s.paySince : t;
+  out.paydays = {}; if (s.paydays && typeof s.paydays === "object") for (const [k, v] of Object.entries(s.paydays)) { if (v && v.lines && typeof v.lines === "object") { const l = {}; for (const [kk, vv] of Object.entries(v.lines)) if (isFinite(+vv)) l[kk] = E.r2(+vv); out.paydays[k] = { lines: l, ts: +v.ts || 0 }; } }
+  out.surprises = (Array.isArray(s.surprises) ? s.surprises : []).filter(x => x && ok(x.date) && isFinite(+x.amount)).slice(-200);
+  out.settings.payRemind = !!out.settings.payRemind;
   if (!["auto", "on", "off"].includes(out.settings.dark)) out.settings.dark = "auto";
   if (!["income", "even"].includes(out.settings.split)) out.settings.split = "income";
   if (!["navy", "sage", "terra", "plum", "forest", "graphite"].includes(out.settings.theme)) out.settings.theme = "navy";
@@ -1529,7 +1797,7 @@ const IP = {
   bill: '<path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/>', jar: '<path d="M8 3h8M9 3v3l-2 2.5V19a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V8.5L15 6V3"/><path d="M7 13h10"/>',
   repeat: '<path d="M17 2l3 3-3 3"/><path d="M4 11V9a4 4 0 0 1 4-4h12"/><path d="M7 22l-3-3 3-3"/><path d="M20 13v2a4 4 0 0 1-4 4H4"/>',
   gear: '<circle cx="12" cy="12" r="3"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/>',
-  plus: '<path d="M12 5v14M5 12h14"/>', check: '<path d="M5 12.5l4.5 4.5L19 7.5"/>', x: '<path d="M6 6l12 12M18 6L6 18"/>',
+  arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>', chat: '<path d="M5 5h14v10H9l-4 4z"/>', plus: '<path d="M12 5v14M5 12h14"/>', copy: '<rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a1 1 0 0 1 1-1h10"/>', check: '<path d="M5 12.5l4.5 4.5L19 7.5"/>', x: '<path d="M6 6l12 12M18 6L6 18"/>',
   edit: '<path d="M4 20h4L19 9l-4-4L4 16z"/>', trash: '<path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/>',
   left: '<path d="M15 6l-6 6 6 6"/>', right: '<path d="M9 6l6 6-6 6"/>', chev: '<path d="M6 9l6 6 6-6"/>', down: '<path d="M12 4v12M6 11l6 6 6-6M5 20h14"/>', up: '<path d="M12 20V8M6 13l6-6 6 6M5 4h14"/>',
   cal: '<rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/>', bell: '<path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/>',
@@ -1577,7 +1845,7 @@ function barsLine(periods, o) {
 function balChart(line, o) {
   const W = o.w, H = o.h || 170, L = 46, R = 10, T = 14, B = 24, w = W - L - R, h = H - T - B;
   const t0 = o.from, t1 = o.to, span = Math.max(1, E.diff(t0, t1));
-  const vals = line.map(p => Math.min(p.bal, p.low ?? p.bal)).concat(line.map(p => p.bal), [0]);
+  const vals = line.map(p => Math.min(p.bal, p.low ?? p.bal)).concat(line.map(p => p.bal), [0], (o.line2 || []).map(p => Math.min(p.bal, p.low ?? p.bal)), (o.line2 || []).map(p => p.bal));
   const tk = ticks(Math.min(...vals), Math.max(...vals, 1), o.small ? 3 : 4), lo = tk[0], hi = tk[tk.length - 1];
   const X = d => L + w * clamp(E.diff(t0, d), 0, span) / span, Y = v => T + h - h * (v - lo) / ((hi - lo) || 1);
   let s = `<svg class="chart" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(o.label)}"><g class="grid">`;
@@ -1595,6 +1863,7 @@ function balChart(line, o) {
   d += `H${X(t1).toFixed(1)}`;
   const area = d + `V${Y(Math.max(lo, 0)).toFixed(1)}H${X(line[0].date).toFixed(1)}Z`;
   s += `<path d="${area}" class="m-bal-area"/><path d="${d}" class="m-bal" fill="none"/>`;
+  if (o.line2 && o.line2.length) { const l2 = o.line2; let d2 = `M${X(l2[0].date).toFixed(1)},${Y(l2[0].bal).toFixed(1)}`; for (let i = 1; i < l2.length; i++) d2 += `H${X(l2[i].date).toFixed(1)}V${Y(l2[i].low ?? l2[i].bal).toFixed(1)}V${Y(l2[i].bal).toFixed(1)}`; s += `<path d="${d2}H${X(t1).toFixed(1)}" class="m-bal2" fill="none"/>`; }
   (o.eps || []).forEach((p, i) => {
     const x = X(p.lowDate), y = Y(p.low);
     s += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="5" class="m-dip" data-tip="${esc(dshort(p.lowDate) + ": " + fmt0(-p.low) + " short")}"/>`;
@@ -1696,8 +1965,8 @@ function shell(content) {
     <nav class="navs">${nav}</nav>
     <div class="sidefoot">${DEMO ? "Free demo" : "Saved on this device only"}<br>v${esc(window.BP_VERSION || "")}</div></aside>
     <div class="mtop"><a class="brand" href="#/home">${MARK}<b>Bill Smoother</b></a><a class="iconbtn ${r === "settings" ? "on" : ""}" href="#/settings" aria-label="Settings">${ic("gear")}</a></div>
-    <main class="main" id="main">${content}</main></div>
-    <nav class="tabbar">${NAV.slice(0, 5).map(([id, name, icon]) => `<a href="#/${id}" class="${r === id ? "on" : ""}">${ic(icon)}<span>${id === "subs" ? "Subs" : name}</span></a>`).join("")}</nav>`;
+    <main class="main" id="main">${S.setup || DEMO ? `<div class="toolbar"><button class="btn ghost sm" data-act="whatIf">What if…</button><button class="btn pri sm" data-act="surprise">${ic("plus")}Surprise bill</button></div>` : ""}${content}</main></div>
+    <nav class="tabbar">${NAV.slice(0, 5).map(([id, name, icon], i) => `${i === 2 ? `<button class="tabplus" data-act="surprise" aria-label="Add a surprise bill">${ic("plus")}</button>` : ""}<a href="#/${id}" class="${r === id ? "on" : ""}">${ic(icon)}<span>${id === "subs" ? "Subs" : name}</span></a>`).join("")}</nav>`;
 }
 const cancelSoon = () => { const t = today(); return S.bills.filter(b => b.cancelBy && !b.end && b.cancelBy >= E.addDays(t, -3) && E.diff(t, b.cancelBy) <= 14); };
 
@@ -1789,7 +2058,7 @@ function vHome() {
   const low = pr.line.reduce((a, p) => Math.min(a, p.low ?? p.bal), Infinity), lowP = pr.line.find(p => (p.low ?? p.bal) === low);
   const outlook = tile("outlook", "Next 12 months", noBills ? emptyT("Your 12-month outlook appears here once you add a bill.", "newBill", "Add a bill") :
     `<div class="chartbox">${balChart(pr.line, { w: tileW(2), h: 245, from: t, to, eps, small: true, label: "Bills money over the next 12 months" })}</div>
-    <p class="cap">${eps.length ? `${ic("alert", "bad")}<span class="grow">A short spot around ${dshort(eps[0].lowDate)} – the box above fixes it.</span>` : `${ic("ok", "okc")}<span class="grow">Lowest point ${fmt0(low)} on ${dshort(lowP ? lowP.date : t)} – never below zero.</span>`}</p>`,
+    <p class="cap">${eps.length ? `${ic("alert", "bad")}<span class="grow">A short spot around ${dshort(eps[0].lowDate)} – the box above fixes it.</span>` : `${ic("ok", "okc")}<span class="grow">Lowest point ${fmt0(low)} on ${dshort(lowP ? lowP.date : t)} – never below zero.</span>`}<button class="lnk wilink" data-act="whatIf">What if…</button></p>`,
     { span: 2, icon: "plan", sub: "Bills money after each payday and bill · jars not included", go: "plan" });
   const soon = upcoming(30).slice(0, 5);
   const coming = tile("coming", "Coming up", soon.length ? `<div class="list">${soon.map(o => billRow(o.b, o.date, true)).join("")}</div>` : emptyT(noBills ? "Your next bills show up here, with a circle to tick them off." : "Nothing due in the next 30 days.", noBills ? "newBill" : "", "Add a bill"), { icon: "cal", go: "bills" });
@@ -1815,7 +2084,7 @@ function vHome() {
     ${rises.length ? `<p class="badge-rise">${ic("up")}Prices up ${fmt0(E.sum(rises, r => r.perYear))} a year</p>` : ""}
     ${cb ? `<p class="meta">${ic("bell")} Cancel ${esc(cb.name)} by ${dshort(cb.cancelBy)}</p>` : `<p class="meta">No cancel-by dates coming up.</p>`}
     <div class="topsubs">${[...subs].sort((a, b) => E.perYear(b) - E.perYear(a)).slice(0, 3).map((b, i, arr) => `<div><div class="row sb"><span>${esc(b.name)}</span><span class="num muted">${fmt0(E.perYear(b))}/yr</span></div><span class="track jt"><i style="width:${(E.perYear(b) / E.perYear(arr[0]) * 100).toFixed(1)}%"></i></span></div>`).join("")}</div>` : emptyT("Add streaming, music, apps or the gym to see what they really cost a year."), { icon: "repeat", go: "subs" });
-  return `${hero}${kpis}<div class="ov">${outlook}${coming}${flow_}${where}${subT}${jars}</div>`;
+  return `${hero}${paydayBlock(true)}${kpis}<div class="ov">${outlook}${coming}${flow_}${where}${subT}${jars}</div>`;
 }
 const fmtk_ = v => Math.abs(v) >= 10000 ? fk(v) : fmt0(v);
 // bills due in the next n days plus anything not ticked from the last 30
@@ -1862,7 +2131,7 @@ function vPlan() {
   const radar = card("Crunch radar", `${legend}<div class="chartbox">${barsLine(per, { w, h: 220, label: "Bills due and money set aside, next 12 months" })}</div>
     <h3 class="sub2">Bills money after jars</h3><div class="chartbox">${balChart(pr.line, { w, h: 170, from: t, to, eps: pr.eps, label: "Bills money over the next 12 months" })}</div>
     ${eps ? `<ul class="dips">${eps}${pr.eps.length > 1 ? `<li>${ic("alert", "bad")}<span>It keeps coming up short until ${dshort(pr.eps[pr.eps.length - 1].last)} unless the number changes.</span></li>` : ""}</ul>${st.acts ? `<div class="row wrap gap8 mt8">${st.acts}</div>` : ""}`
-      : `<p class="cap">${ic("ok", "okc")} No paycheck in the next 12 months leaves you short.</p>`}`,
+      : `<p class="cap">${ic("ok", "okc")} No paycheck in the next 12 months leaves you short.</p>`}${eps ? moveHintLine() : ""}`,
     { sub: `${byPay ? "Per paycheck" : "Per month"} · the bars are lumpy, what you set aside stays smooth`, id: "radar", icon: "plan" });
   // where the next paycheck goes – the rows add up to the number under them
   const cols = P.earners, byId = {};
@@ -1889,7 +2158,7 @@ function vPlan() {
     <p><b>Catching up.</b> When a bill is close and its pot can't be full by then – a yearly bill six weeks away, or you're just starting – the missing part is spread evenly over the paychecks left before it. As soon as it's covered, the number drops back.</p>
     <p><b>Jars</b> take what's still missing, divided by the paychecks until their date. Money you already set aside goes to whatever is due first.</p>
     <p><b>Never short, never too much.</b> The app checks every due date of the next two years. The number is the smallest one that covers all of them, rounded up to a whole ${esc(symbol())}. Nothing piles up: after a bill is paid, its pot holds about one paycheck's share at most.</p></div></details>`;
-  return `${head("Your plan", "What each paycheck sets aside, and why it's enough.")}<div class="grid ${two() ? "g2" : "g1"}">${people}</div>${radar}${bd}${yearCards(m)}${how}`;
+  return `${head("Your plan", "What each paycheck sets aside, and why it's enough.", btn("What if…", "whatIf", { cls: "ghost" }))}<div class="grid ${two() ? "g2" : "g1"}">${people}</div>${paydayPlanCard()}${radar}${bd}${yearCards(m)}${how}`;
 }
 function yearCards(m) {
   const t = today(), live = S.bills.filter(b => !b.end || b.end >= t), byCat = {};
@@ -1926,7 +2195,7 @@ function vBills() {
       ${card("All bills", `<div class="list">${live.map(x => billRow(x.b, x.d, false).replace('<div class="meta">', `<div class="meta">`)).join("")}</div>${ended.length ? `<h3 class="sub2">Ended</h3><div class="list">${ended.map(x => billRow(x.b, "", false)).join("")}</div>` : ""}`,
         { sub: `${plural(live.length, "bill")} · about ${fmt0(month)} a month`, right: `<span class="hint">Tick the circle when it's paid</span>` })}`;
   }
-  return `${head("Bills", "Everything that comes out regularly.", acts)}${seg}${body}`;
+  return `${head("Bills", "Everything that comes out regularly.", acts)}${seg}${body}${surpriseCard()}`;
 }
 function calView() {
   const t = today(), mon = VS.calMonth || E.ym(t), first = mon + "-01", L = E.dim(+mon.slice(0, 4), +mon.slice(5, 7) - 1);
@@ -2020,7 +2289,7 @@ function vSubs() {
   const cancel = soon.length ? card("Cancel by", `<div class="list">${soon.map(b => `<div class="item"><span class="cat">${ic("bell")}</span><div class="grow"><div class="nm">${esc(b.name)}</div><div class="meta ${b.cancelBy < t ? "badc" : ""}">${b.cancelBy < t ? "The date has passed – " + dshort(b.cancelBy) : "Cancel by " + dlong(b.cancelBy) + " (" + rel(b.cancelBy) + ")"} · ${fmt(b.amount)} ${FREQ[b.freq].toLowerCase()}</div></div><div class="row gap8">${btn("Cancelled it", "cancelled", { cls: "sm", data: { id: b.id } })}${btn("Keep it", "keepSub", { cls: "sm ghost", data: { id: b.id } })}</div></div>`).join("")}</div>`, { sub: "Free trials and things you meant to stop" }) : "";
   const rows = [...live].sort((a, b) => E.perYear(b) - E.perYear(a)).map(b => {
     const r = E.priceRise(b), py = E.perYear(b);
-    return `<div class="sub click" data-act="editBill" data-id="${b.id}"><div class="sr"><div class="grow"><div class="nm">${esc(b.name)}</div><div class="meta">${fmt(b.amount)} ${FREQ[b.freq].toLowerCase()}${b.cancelBy && b.cancelBy >= t ? " · cancel by " + dshort(b.cancelBy) : ""}</div></div>
+    return `<div class="sub click" data-act="editBill" data-id="${b.id}"><div class="sr"><div class="grow"><div class="nm">${esc(b.name)}</div><div class="meta">${fmt(b.amount)} ${FREQ[b.freq].toLowerCase()}${b.cancelBy && b.cancelBy >= t ? " · cancel by " + dshort(b.cancelBy) : ""}</div><button class="lnk say" data-act="say" data-id="${b.id}">${ic("chat")}What to say</button></div>
       <div class="sv"><b class="num">${fmt0(py)}</b><span class="muted">/yr</span><div class="meta num">${fmt(py / 12)}/mo</div></div></div>
       <span class="track"><i style="width:${(py / top * 100).toFixed(1)}%"></i></span>
       ${r ? `<div class="rise">${ic("up")}<span>+${fmt(r.perMonth)}/mo since ${MON[E.pd(r.since).getMonth()]}${r.since.slice(0, 4) !== t.slice(0, 4) ? " " + r.since.slice(0, 4) : ""} = <b>+${fmt0(r.perYear)}/yr</b> (was ${fmt(r.from)})</span></div>` : ""}</div>`;
@@ -2039,7 +2308,7 @@ function vSettings() {
     ${card("Pay", `<div class="list">${pay}</div>${S.earners.length < 2 ? `<div class="mt8">${btn("Add a partner's pay", "newEarner", { icon: "plus", cls: "ghost" })}</div>` : ""}${split}`, { sub: "Who sets money aside, and when" })}
     ${card("Bills money", `<div class="money in"><div><span class="lbl">Set aside now</span><b class="num">${fmt(m.totalNow)}</b></div><div><span class="lbl">In jars</span><b class="num">${fmt(m.jarsNow)}</b></div><div><span class="lbl">For bills</span><b class="num">${fmt(m.freeNow)}</b></div></div>
       <div class="row wrap gap8 mt8">${btn("Update the balance", "balModal", { cls: "ghost" })}${btn("Add money", "topUp", { cls: "ghost" })}</div><p class="help">Everything you've moved to your bills account, jars included. The app adds your set-aside on each payday and takes bills out on their dates – update it whenever your bank says something else.</p>`)}
-    ${card("Reminders", `<p class="help" style="margin-top:0">Download a calendar file and open it on your phone: every bill for the next 12 months, with a reminder the day before at 9:00, and the cancel-by dates of trials. After you change, cancel or delete a bill, download it again – Apple Calendar and Outlook update or remove the old events. Google Calendar keeps the old ones, so delete them there by hand.</p><div class="mt8">${btn("Download calendar file", "ics", { icon: "cal", cls: "ghost" })}</div>`)}
+    ${card("Reminders", `<p class="help" style="margin-top:0">Download a calendar file and open it on your phone: every bill for the next 12 months, with a reminder the day before at 9:00, and the cancel-by dates of trials. After you change, cancel or delete a bill, download it again – Apple Calendar and Outlook update or remove the old events. Google Calendar keeps the old ones, so delete them there by hand.</p><label class="check mt8" data-act="payRemind"><input type="checkbox" ${S.settings.payRemind ? "checked" : ""}> Payday reminder – each payday at 8:00, with what to set aside</label><div class="mt8">${btn("Download calendar file", "ics", { icon: "cal", cls: "ghost" })}</div>`)}
     </div><div class="col">
     ${card("Look", `<div class="field"><label>Color theme</label>${themePicker()}</div><div class="field"><label>Currency</label><select class="inp" data-set="currency">${curs.map(c => `<option ${c === cur() ? "selected" : ""}>${c}</option>`).join("")}</select></div>
       <div class="field"><label>Appearance</label><div class="seg">${[["auto", "Auto"], ["off", "Light"], ["on", "Dark"]].map(([k, l]) => `<button class="${S.settings.dark === k ? "on" : ""}" data-act="setDark" data-v="${k}">${l}</button>`).join("")}</div></div>`)}
@@ -2081,7 +2350,7 @@ function wireSplit(idp) { const s = $("#" + idp + "M"); if (s) s.addEventListene
 let BCAT = "other";
 function billModal(b, preset = {}) {
   const isNew = !b, t = today();
-  b = b || { name: preset.name || "", amount: "", freq: preset.freq || "monthly", next: preset.next || E.addMonths(E.monthStart(t), 1, 1), cat: preset.cat || "other", cancelBy: "", split: { mode: "shared" } };
+  b = b || { name: preset.name || "", amount: preset.amount || "", freq: preset.freq || "monthly", next: preset.next || E.addMonths(E.monthStart(t), 1, 1), cat: preset.cat || "other", cancelBy: "", split: { mode: "shared" } };
   BCAT = b.cat;
   const nx = isNew ? b.next : nextOcc(b) || b.next;
   const linked = !isNew && S.jars.find(j => j.bill === b.id);
@@ -2326,6 +2595,212 @@ function planTarget(id) {
   commit(() => { rebase(); j.target = tot; }, "target");
   toast(`${esc(j.name)} now saves for ${fmt0(tot)}.`, () => undo());
 }
+
+/* what to do, not just what it is: the payday checklist, a surprise bill with a rescue plan, what if…, what to say */
+
+// ------------------------------------------------------------ 1. payday checklist
+const pdId = L => L.e.id + "|" + L.date;
+function payCard(L, o = {}) {
+  const t = today(), who = two() ? esc(L.e.name) + " · " : "", past = L.date < t;
+  const rows = L.lines.filter(l => l.amount > 0.004 || l.done).map(l => {
+    const diff_ = l.done && Math.abs(l.moved - l.amount) > 0.004;
+    return `<div class="tf ${l.done ? "done" : ""}"><button class="tick ${l.done ? "on" : ""}" role="checkbox" aria-checked="${l.done}" aria-label="${l.done ? "Done – tap to undo" : "Mark as moved"}" data-act="pdTick" data-e="${L.e.id}" data-d="${L.date}" data-k="${l.key}">${ic("check")}</button>
+      <div class="grow"><div class="nm">${ic("arrow", "arr")}${l.kind === "acct" ? "Bills account" : esc(l.name) + " jar"}</div>${diff_ ? `<div class="meta">moved ${fmt(l.moved)} · planned ${fmt(l.amount)}</div>` : ""}</div>
+      <button class="amt num lnk2" data-act="pdAmt" data-e="${L.e.id}" data-d="${L.date}" data-k="${l.key}" title="Moved a different amount?">${fmt(l.done ? l.moved : l.amount)}</button></div>`;
+  }).join("");
+  const left = L.lines.filter(l => !l.done && l.amount > 0.004).length;
+  return `<section class="card payday" data-pd="${pdId(L)}"><div class="pdh"><div><div class="kick">Payday${past ? " · not checked off yet" : ""}</div><h2>${who}${dlong(L.date)}</h2></div><div class="pdn">${serifMoney(L.rate)}</div></div>
+    <p class="meta">Move these from your paycheck${past ? "" : " today"} and tick each one once it's done.</p>
+    <div class="tfs">${rows}${L.everyday !== null ? `<div class="tf stay"><span class="dot"></span><div class="grow"><div class="nm">Stays for everyday</div></div><span class="amt num">${fmt(L.everyday)}</span></div>` : ""}</div>
+    ${left ? `<div class="row gap8 mt8 pdf"><span class="meta grow">${left === 1 ? "One transfer left" : `${left} transfers left`}</span>${btn("All done", "pdAll", { cls: "pri sm", data: { e: L.e.id, d: L.date } })}</div>` : ""}</section>`;
+}
+// the Overview: today's paydays as cards, a calm line once done, older ones gently
+function paydayBlock(home) {
+  if (!S.bills.length || !S.earners.length) return "";
+  const t = today(), open = E.paydaysOpen(S, t), out = [];
+  open.filter(L => L.date === t || VS.pdShow === pdId(L)).forEach(L => out.push(payCard(L)));
+  S.earners.forEach(e => { if (E.payDates(e, t, t).length) { const L = E.payList(S, e, t, t); if (L.done && L.rate > 0) out.push(`<div class="pdok">${ic("ok", "okc")}<span class="grow">${two() ? esc(e.name) + "'s payday" : "Payday"} done – ${fmt0(L.rate)} set aside${L.lines.some(l => l.done && Math.abs(l.moved - l.amount) > 0.004) ? " (as you moved it)" : ""}.</span></div>`); } });
+  const missed = open.filter(L => L.date < t && VS.pdShow !== pdId(L));
+  if (missed.length) out.push(`<div class="pdmiss">${missed.slice(0, 2).map(L => `<div class="row gap8"><span class="grow">${ic("cal")} ${dshort(L.date)} payday${two() ? " (" + esc(L.e.name) + ")" : ""} not checked off – done it?</span><button class="lnk" data-act="pdShow" data-v="${pdId(L)}">Check it off</button></div>`).join("")}</div>`);
+  return out.length ? `<div class="pdwrap">${out.join("")}</div>` : "";
+}
+// the Plan page: the same, plus what the next payday will ask for
+function paydayPlanCard() {
+  if (!S.bills.length || !S.earners.length) return "";
+  const t = today(), blk = paydayBlock(false);
+  const next = S.earners.map(e => { const d = E.payDates(e, E.addDays(t, 1), E.addMonths(t, 2))[0]; return d ? E.payList(S, e, d, t) : null; }).filter(Boolean).sort((a, b) => a.date < b.date ? -1 : 1);
+  const nx = next.map(L => `<div class="pdnext"><div class="row sb"><b>${two() ? esc(L.e.name) + " · " : ""}${dlong(L.date)}</b><b class="num">${fmt(L.rate)}</b></div>${L.lines.filter(l => l.amount > 0.004).map(l => `<div class="row sb meta"><span>${l.kind === "acct" ? "Bills account" : esc(l.name) + " jar"}</span><span class="num">${fmt(l.amount)}</span></div>`).join("")}${L.everyday !== null ? `<div class="row sb meta"><span>Stays for everyday</span><span class="num">${fmt(L.everyday)}</span></div>` : ""}</div>`).join("");
+  return card("Payday checklist", `${blk || `<p class="meta">Nothing to check off right now.</p>`}<h3 class="sub2">Next payday${next.length > 1 ? "s" : ""}</h3><div class="pdnexts">${nx}</div>`, { icon: "cal", sub: "The exact transfers for each paycheck", id: "payday" });
+}
+function pdFind(d) { const e = S.earners.find(x => x.id === d.e); return e ? { e, L: E.payList(S, e, d.d, today()) } : null; }
+function pdTick(d) {
+  const f = pdFind(d); if (!f) return; const l = f.L.lines.find(x => x.key === d.k); if (!l) return;
+  if (l.done) { commit(() => E.untickTransfer(S, f.e, d.d, d.k, today(), now()), "untick transfer"); return toast("Unticked.", () => undo()); }
+  commit(() => E.tickTransfer(S, f.e, d.d, d.k, null, today(), now()), "transfer");
+  const L2 = E.payList(S, f.e, d.d, today()); if (L2.done) { if (VS.pdShow === pdId(L2)) VS.pdShow = null; render(); toast(`All done – ${fmt0(L2.rate)} set aside.`, () => undo()); }
+}
+function pdAll(d) {
+  const f = pdFind(d); if (!f) return;
+  commit(() => f.L.lines.filter(l => !l.done && l.amount > 0.004).forEach(l => E.tickTransfer(S, f.e, d.d, l.key, null, today(), now())), "payday done");
+  if (VS.pdShow === pdId(f.L)) { VS.pdShow = null; render(); }
+  toast(`All done – ${fmt0(f.L.rate)} set aside.`, () => undo());
+}
+function pdAmt(d) {
+  const f = pdFind(d); if (!f) return; const l = f.L.lines.find(x => x.key === d.k); if (!l) return;
+  modal(`${l.kind === "acct" ? "Bills account" : esc(l.name) + " jar"} · ${dshort(d.d)}`, `<div class="amountview"><input id="pdA" inputmode="decimal" autocomplete="off" aria-label="Amount moved" autofocus value="${esc(String(l.done ? l.moved : l.amount))}"></div>
+    <p class="help">Planned: ${fmt(l.amount)}. Moved a different amount? Type what you actually moved – the app counts that, once.</p>`,
+    `<button class="btn pri" data-act="pdAmtOk" data-e="${d.e}" data-d="${d.d}" data-k="${d.k}">Done</button>`);
+}
+function pdAmtOk(d) {
+  const f = pdFind(d); if (!f) return; const a = num(val("pdA"));
+  if (!isFinite(a) || a < 0) return bad("Type the amount you moved.");
+  commit(() => { const l = f.L.lines.find(x => x.key === d.k); if (l && l.done) E.untickTransfer(S, f.e, d.d, d.k, today(), now()); E.tickTransfer(S, f.e, d.d, d.k, a, today(), now()); }, "transfer");
+  closeModal(); toast(`${fmt(a)} counted.`, () => undo());
+}
+
+// ------------------------------------------------------------ 2. a surprise bill
+let SX = null;   // the surprise being entered: {name, amount, date, note, n}
+function surpriseModal() {
+  SX = { name: "", amount: "", date: E.addDays(today(), 14), note: "", n: 3, step: 1 };
+  modal("Add a surprise bill", sxForm(), `<button class="btn pri" data-act="sxNext">See my options</button>`);
+}
+const sxForm = () => `${field("What is it?", inp("sxN", SX.name, { ph: "Car repair, vet, dentist…", auto: true }))}
+  <div class="grid g2 tight">${field("Amount", moneyInp("sxA", SX.amount, { ph: symbol() + "0" }))}${field("Due", inp("sxD", SX.date, { type: "date", extra: `min="${today()}"` }))}</div>
+  ${field("Note (optional)", inp("sxO", SX.note, { ph: "Garage invoice #…" }))}
+  <p class="help">Comes back regularly? <button class="lnk" data-act="sxBill">Add it as a bill</button> · Saving up for it? <button class="lnk" data-act="sxJar">Make a jar</button></p>`;
+function sxNext() {
+  const name = val("sxN").trim(), a = num(val("sxA")), d = val("sxD");
+  if (!name) return bad("What is it?");
+  if (!(a > 0)) return bad("How much is it?");
+  if (!E.okDate(d) || d < today()) return bad("Pick a due date from today on.");
+  Object.assign(SX, { name: name.slice(0, 60), amount: E.r2(a), date: d, note: val("sxO").trim().slice(0, 80), step: 2 });
+  SX.n = clamp(E.rescue(S, SX, today(), 3).nDue, 1, 12);
+  sxRender();
+}
+function sxRender() {
+  const m = $(".modal"); if (!m) return;
+  const R = E.rescue(S, SX, today(), SX.n), per = D => two() ? S.earners.filter(e => D[e.id] > 0).map(e => `${esc(e.name)} +${fmt0(D[e.id])}`).join(" · ") + " per paycheck" : `+${fmt0(Object.values(D)[0] || 0)} per paycheck`;
+  const res = o => !o.after.short ? `<span class="okc">${ic("ok")} Every bill stays covered</span>` : R.before.short && o.after.short <= R.before.short + 0.5 ? `<span class="okc">${ic("ok")} No new short spot</span>` : `<span class="badc">${ic("alert")} Still ${fmt0(o.after.short)} short on ${dshort(o.after.date)}</span>`;
+  const opt = (key, title, sub, result, data = {}) => `<div class="sxo" data-k="${key}"><div class="grow"><div class="nm">${title}</div>${sub ? `<div class="meta">${sub}</div>` : ""}${result ? `<div class="meta res">${result}</div>` : ""}</div>${btn("Choose", "sxUse", { cls: "sm", data: { k: key, ...data } })}</div>`;
+  const stepper = `<span class="stepper"><button class="iconbtn sm" data-act="sxN_" data-v="-1" aria-label="Fewer paychecks" ${SX.n <= 1 ? "disabled" : ""}>−</button><b class="num">${SX.n}</b><button class="iconbtn sm" data-act="sxN_" data-v="1" aria-label="More paychecks" ${SX.n >= 12 ? "disabled" : ""}>+</button></span>`;
+  const sp = R.spread;
+  const opts = [
+    R.covered ? opt("covered", "Pay it from your bills money", "Your bills money covers it – nothing else changes.", res({ after: R.impact })) : "",
+    R.jar ? opt("jar", `Pay from your ${esc(R.jar.name)} jar`, `${fmt0(R.jar.now)} there · ${fmt0(R.jar.now - R.amount)} left after`, res(R.jar), { jar: R.jar.id }) : "",
+    `<div class="sxo" data-k="spread"><div class="grow"><div class="nm">Spread over the next ${stepper} paycheck${SX.n === 1 ? "" : "s"}</div><div class="meta">${per(sp.deltas)}${sp.until ? ` until ${dshort(sp.until)}` : ""}</div><div class="meta res">${res(sp)}</div></div>${btn("Choose", "sxUse", { cls: "sm", data: { k: "spread" } })}</div>`,
+    R.mix ? opt("mix", `Mix: ${fmt0(R.mix.fromJar)} from ${esc(R.mix.name)} + the rest spread`, `${per(R.mix.deltas || {})}${R.mix.until ? ` until ${dshort(R.mix.until)}` : ""}`, res(R.mix), { jar: R.mix.id, a: R.mix.fromJar }) : "",
+    opt("everyday", "Already paid from everyday money", "Just note it – nothing in your plan changes.", "")
+  ].join("");
+  const impact = R.covered ? `<p>${ic("ok", "okc")} Your bills money can take it – you choose how.</p>` : `<p>${ic("alert", "bad")} On its own it would leave you <b>${fmt0(R.impact.short)} short on ${dshort(R.impact.date)}</b>. Pick one way to cover it:</p>`;
+  m.querySelector(".mh h2").textContent = SX.name;
+  m.querySelector(".mb").innerHTML = `<div class="sxhead"><div><div class="kick">Surprise bill</div><div class="meta">Due ${dlong(SX.date)}${SX.note ? " · " + esc(SX.note) : ""}</div></div>${serifMoney(SX.amount)}</div><div class="sximpact">${impact}</div><div class="sxos">${opts}</div>`;
+  m.querySelector(".mf").innerHTML = `<button class="btn ghost" data-act="sxBack">Back</button>`;
+}
+function sxUse(d) {
+  const o = d.k === "jar" ? { jar: d.jar } : d.k === "mix" ? { jar: d.jar, fromJar: +d.a, n: SX.n } : d.k === "spread" ? { n: SX.n } : {};
+  const x = { ...SX }; let rec = null;
+  commit(() => { rec = E.applySurprise(S, x, d.k, o, today(), now()); }, "surprise bill");
+  closeModal();
+  const msg = { covered: `${esc(x.name)} added – your bills money covers it.`, jar: `${esc(x.name)}: ${fmt0(x.amount)} from ${esc((S.jars.find(j => j.id === d.jar) || {}).name || "the jar")}.`,
+    spread: `${esc(x.name)} added – a little more from the next ${plural(SX.n, "paycheck")}.`, mix: `${esc(x.name)}: part from the jar, the rest over ${plural(SX.n, "paycheck")}.`, everyday: `${esc(x.name)} noted.` }[d.k];
+  toast(rec ? msg : "Couldn't do that – try another option.", rec ? () => undo() : null);
+}
+const SXACT = {
+  surprise: () => surpriseModal(), sxNext: () => sxNext(), sxBack: () => { const m = $(".modal"); SX.step = 1; m.querySelector(".mh h2").textContent = "Add a surprise bill"; m.querySelector(".mb").innerHTML = sxForm(); m.querySelector(".mf").innerHTML = `<button class="btn pri" data-act="sxNext">See my options</button>`; },
+  sxN_: d => { SX.n = clamp(SX.n + +d.v, 1, 12); sxRender(); }, sxUse: d => sxUse(d),
+  sxBill: () => { closeModal(); billModal(null, { name: val("sxN"), amount: num(val("sxA")) || "" }); }, sxJar: () => { closeModal(); jarModal(null); }
+};
+function surpriseCard() {
+  const L = (S.surprises || []).slice(-6).reverse(); if (!L.length) return "";
+  const how = x => x.how === "jar" ? `from the ${esc((S.jars.find(j => j.id === x.jar) || { name: "" }).name)} jar` : x.how === "mix" ? `${fmt0(x.fromJar || 0)} from a jar, the rest over ${plural(x.n || 1, "paycheck")}` : x.how === "spread" ? `spread over ${plural(x.n || 1, "paycheck")}` : x.how === "everyday" ? "paid from everyday money" : "from the bills money";
+  return card("Surprise bills", `<div class="list">${L.map(x => `<div class="item"><span class="cat">${ic("alert")}</span><div class="grow"><div class="nm">${esc(x.name)}</div><div class="meta">${dshort(x.date)} · ${how(x)}${x.note ? " · " + esc(x.note) : ""}</div></div><div class="amt num">${fmt(x.amount)}</div></div>`).join("")}</div>`, { sub: "What came up, and how you covered it" });
+}
+
+// ------------------------------------------------------------ 3. what if…
+let WI = null;   // {changes: [], form: ''}
+const WIT = [["addBill", "A new bill"], ["dropBill", "Drop a bill"], ["moveBill", "Move a bill's date"], ["pay", "Different take-home pay"], ["off", "No pay for a while"], ["stop", "Stops working"], ["addJar", "A new jar"]];
+function whatIfOpen(pre) { WI = { changes: pre ? [pre] : [], form: "" }; modal("What if…", "", " ", { wide: true }); wiRender(); }
+function wiLabel(c) {
+  const b = c.id && S.bills.find(x => x.id === c.id), e = c.e && S.earners.find(x => x.id === c.e);
+  return c.t === "addBill" ? `New bill: ${esc(c.name)} ${fmt(c.amount)} ${FREQ[c.freq].toLowerCase()} from ${dshort(c.next)}` : c.t === "dropBill" ? `Without ${esc(b ? b.name : "")}` : c.t === "moveBill" ? `${esc(b ? b.name : "")} moved to ${dshort(c.next)}`
+    : c.t === "pay" ? `${esc(e ? e.name : "")}: take-home ${fmt0(c.pay)}` : c.t === "off" ? `${esc(e ? e.name : "")}: no pay for ${plural(c.months, "month")}` : c.t === "stop" ? `${esc(e ? e.name : "")} stops working` : `New jar: ${esc(c.name)} ${fmt0(c.target)}${c.date ? " by " + dshort(c.date) : ""}`;
+}
+function wiForm(tp) {
+  const bills = S.bills.filter(b => !b.end || b.end >= today()), eo = S.earners.map(e => opt(e.id, e.name, "")).join(""), bo = bills.map(b => opt(b.id, `${b.name} · ${fmt(b.amount)}`, "")).join("");
+  const f = { addBill: `${field("Name", inp("wN", "", { ph: "Car lease" }))}<div class="grid g3 tight">${field("Amount", moneyInp("wA", ""))}${field("How often", `<select class="inp" id="wF">${Object.entries(FREQ).map(([k, l]) => opt(k, l, "monthly")).join("")}</select>`)}${field("First due", inp("wD", E.addMonths(today(), 1), { type: "date" }))}</div>`,
+    dropBill: field("Which bill", `<select class="inp" id="wB">${bo}</select>`), moveBill: `<div class="grid g2 tight">${field("Which bill", `<select class="inp" id="wB">${bo}</select>`)}${field("New next due date", inp("wD", E.addDays(today(), 7), { type: "date", extra: `min="${today()}"` }))}</div>`,
+    pay: `<div class="grid g2 tight">${S.earners.length > 1 ? field("Whose pay", `<select class="inp" id="wE">${eo}</select>`) : ""}${field("Take-home per paycheck", moneyInp("wP", S.earners[0] ? S.earners[0].pay || "" : ""))}</div>`,
+    off: `<div class="grid g2 tight">${S.earners.length > 1 ? field("Who", `<select class="inp" id="wE">${eo}</select>`) : ""}${field("For how many months", `<select class="inp" id="wM">${[1, 2, 3, 4, 6, 9, 12].map(n => opt(n, plural(n, "month"), 3)).join("")}</select>`)}</div>`,
+    stop: S.earners.length > 1 ? field("Who", `<select class="inp" id="wE">${eo}</select>`, "The other one's paychecks carry the shared bills from then on.") : `<p class="help">With one paycheck there's nobody to carry the bills – try "No pay for a while".</p>`,
+    addJar: `<div class="grid g3 tight">${field("Name", inp("wN", "", { ph: "New sofa" }))}${field("Target", moneyInp("wA", ""))}${field("By (optional)", inp("wD", "", { type: "date" }))}</div>` }[tp];
+  return `<div class="wiform">${f}<div class="row gap8">${btn("Add this change", "wiAdd", { cls: "pri sm", data: { t: tp } })}${btn("Cancel", "wiForm", { cls: "ghost sm", data: { t: "" } })}</div></div>`;
+}
+function wiAdd(tp) {
+  const e = val("wE") || (S.earners[0] || {}).id, c = { t: tp };
+  if (tp === "addBill") { Object.assign(c, { name: val("wN").trim() || "New bill", amount: num(val("wA")), freq: val("wF"), next: val("wD") }); if (!(c.amount > 0)) return bad("How much is it?"); if (!E.okDate(c.next)) return bad("Pick the first due date."); }
+  else if (tp === "dropBill") c.id = val("wB");
+  else if (tp === "moveBill") { c.id = val("wB"); c.next = val("wD"); if (!E.okDate(c.next) || c.next < today()) return bad("Pick a date from today on."); }
+  else if (tp === "pay") { c.e = e; c.pay = num(val("wP")); if (!(c.pay >= 0)) return bad("Type the take-home pay."); }
+  else if (tp === "off") { c.e = e; c.months = +val("wM"); }
+  else if (tp === "stop") { if (S.earners.length < 2) return; c.e = e; }
+  else if (tp === "addJar") { Object.assign(c, { name: val("wN").trim() || "New jar", target: num(val("wA")), date: val("wD") }); if (!(c.target > 0)) return bad("How much should it hold?"); }
+  if ((c.t === "dropBill" || c.t === "moveBill") && !c.id) return bad("Pick a bill.");
+  WI.changes.push(c); WI.form = ""; wiRender();
+}
+function wiRender() {
+  const m = $(".modal"); if (!m || !WI) return;
+  const t = today(), to = E.addMonths(t, 12), W = WI.changes.length ? E.whatIf(S, WI.changes, t, now()) : null, hint = E.moveHint(S, t);
+  const chg = WI.changes.length ? `<div class="wichips">${WI.changes.map((c, i) => `<span class="wichip">${wiLabel(c)}<button class="iconbtn sm" data-act="wiDel" data-i="${i}" aria-label="Remove this change">${ic("x")}</button></span>`).join("")}</div>` : `<p class="meta">Nothing changes until you press Apply – try as much as you like.</p>`;
+  const add = WI.form ? wiForm(WI.form) : `<div class="wiadd">${WIT.filter(([k]) => k !== "stop" || S.earners.length > 1).map(([k, l]) => `<button class="chip" data-act="wiForm" data-t="${k}">${ic("plus")}${l}</button>`).join("")}</div>`;
+  const hintH = hint && !WI.changes.some(c => c.t === "moveBill" && c.id === hint.id) ? `<div class="status info wihint">${ic("cal")}<div class="grow"><p>Ask <b>${esc(hint.name)}</b> to move its date to the ${ordinal(hint.day)} – that removes the ${MON[E.pd(hint.removes).getMonth()]} short spot.</p><div class="row gap8 mt8">${btn("Try it", "wiHint", { cls: "sm", data: { id: hint.id, d: hint.next } })}</div></div></div>` : "";
+  let cmp = "";
+  if (W) {
+    const w = Math.min(760, (m.clientWidth || 700) - 60);
+    cmp = `<div class="wicmp">${W.per.map(p => { const d_ = p.steadyWith - p.steadyNow; return `<div class="wic"><div class="lbl">${two() ? esc(p.name) + " · " : ""}per paycheck</div><div class="wiv"><span class="num muted">${fmt0(p.steadyNow)}</span>${ic("right", "faint")}<b class="num">${fmt0(p.steadyWith)}</b><span class="wid ${d_ > 0.5 ? "up" : d_ < -0.5 ? "dn" : ""}">${Math.abs(d_) < 0.5 ? "same" : (d_ > 0 ? "+" : "−") + fmt0(Math.abs(d_))}</span></div><div class="meta">${Math.abs(p.with - p.steadyWith) > 0.5 ? `${fmt0(p.with)} from the next paycheck while catching up` : "from the next paycheck on"}</div></div>`; }).join("")}</div>
+      <div class="legend"><span><i class="sw bal"></i>Now</span><span><i class="sw dash"></i>With these changes</span></div>
+      <div class="chartbox">${balChart(W.lineNow, { w: Math.max(260, w), h: 190, from: t, to, eps: W.epsWith, line2: W.lineWith, small: true, label: "Bills money now and with the changes" })}</div>
+      <p class="cap">${W.epsWith.length ? (wst => `${ic("alert", "bad")}<span class="grow">If you keep setting aside what you do now, you'd be up to ${fmt0(wst.short)} short (${dshort(wst.lowDate)}) – apply the changes and use the new number.</span>`)(W.epsWith.reduce((a, b) => b.short > a.short ? b : a)) : `${ic("ok", "okc")}<span class="grow">What you set aside now still covers every bill.</span>`}</p>`;
+  }
+  m.querySelector(".mb").innerHTML = `${hintH}<h3 class="sub2">Changes</h3>${chg}${add}${cmp}`;
+  m.querySelector(".mf").innerHTML = `<button class="btn ghost" data-act="wiDiscard">Discard</button><button class="btn pri" data-act="wiApply" ${WI.changes.length ? "" : "disabled"}>Apply these changes</button>`;
+}
+function wiApply() {
+  if (!WI || !WI.changes.length) return;
+  const n = WI.changes.length;
+  commit(() => { E.applyChanges(S, WI.changes, today(), now()); }, "what if");
+  WI = null; closeModal(); toast(`${plural(n, "change")} applied – check your number.`, () => undo());
+}
+const WIACT = {
+  whatIf: () => whatIfOpen(), wiForm: d => { WI.form = d.t; wiRender(); }, wiAdd: d => wiAdd(d.t), wiDel: d => { WI.changes.splice(+d.i, 1); wiRender(); },
+  wiHint: d => { WI.changes.push({ t: "moveBill", id: d.id, next: d.d }); wiRender(); }, wiHintOpen: d => whatIfOpen({ t: "moveBill", id: d.id, next: d.d }),
+  wiDiscard: () => { WI = null; closeModal(); }, wiApply: () => wiApply()
+};
+// the Plan page: one line when a date move would remove the short spot
+function moveHintLine() {
+  const h = E.moveHint(S, today()); if (!h) return "";
+  return `<div class="status info wihint">${ic("cal")}<div class="grow"><p>Ask <b>${esc(h.name)}</b> to move its date to the ${ordinal(h.day)} – that removes the ${MON[E.pd(h.removes).getMonth()]} short spot.</p><div class="row gap8 mt8">${btn("Try it in What if…", "wiHintOpen", { cls: "sm", data: { id: h.id, d: h.next } })}</div></div></div>`;
+}
+
+// ------------------------------------------------------------ 4. what to say
+const WSK = [["cancel", "Cancel"], ["trial", "Stop the trial"], ["price", "Better price"], ["rise", "Price rise"]];
+let WS = null;
+function sayModal(id) {
+  const b = S.bills.find(x => x.id === id); if (!b) return;
+  const sc = E.scripts(b, today(), v => fmt(v), dlong), k = b.cancelBy && b.cancelBy >= today() ? "trial" : sc.rose ? "rise" : "cancel";
+  WS = { id, k, sc };
+  modal(`What to say · ${esc(b.name)}`, wsBody(), `<button class="btn ghost" data-act="wsCopy">${ic("copy")}Copy text</button><button class="btn pri" data-act="close">Done</button>`);
+}
+const wsBody = () => `<div class="seg wrap wsseg">${WSK.map(([k, l]) => `<button class="${WS.k === k ? "on" : ""}" data-act="wsK" data-v="${k}">${l}</button>`).join("")}</div>
+  <textarea class="inp wst" id="wsT" rows="9" aria-label="Message">${esc(WS.sc[WS.k])}</textarea>
+  <p class="help">Edit it as you like. Where to cancel: most apps – Settings › Subscription › Cancel. iPhone – Settings › your name › Subscriptions. Android – Play Store › Payments &amp; subscriptions.</p>`;
+async function wsCopy() {
+  const v = val("wsT");
+  try { await navigator.clipboard.writeText(v); toast("Copied – paste it into an email or the support chat."); }
+  catch (e) { const t = $("#wsT"); t.select(); try { document.execCommand("copy"); toast("Copied."); } catch (x) { toast("Select the text and copy it."); } }
+}
+const WSACT = { say: d => sayModal(d.id), wsK: d => { WS.k = d.v; const m = $(".modal .mb"); if (m) m.innerHTML = wsBody(); }, wsCopy: () => wsCopy() };
+const XACT = { pdTick: d => pdTick(d), pdAll: d => pdAll(d), pdAmt: d => pdAmt(d), pdAmtOk: d => pdAmtOk(d), pdShow: d => { VS.pdShow = d.v; render(); },
+  payRemind: () => commit(() => { S.settings.payRemind = !S.settings.payRemind; }), ...SXACT, ...WIACT, ...WSACT };
 
 /* onboarding: welcome -> you -> household -> pay (each person) -> bills -> jars -> money & theme -> your number */
 const BILL_PRESETS = [["Rent / mortgage", "housing", "monthly"], ["Electricity", "utilities", "monthly"], ["Water", "utilities", "bimonthly"], ["Internet", "phone", "monthly"], ["Phone", "phone", "monthly"],
@@ -2612,7 +3087,7 @@ const ACT = {
   },
   openBd: () => { VS.open.bd = true; render(); }, openCovers: () => { VS.open.covers = true; render(); },
   notNow: () => { S.seen = S.seen || {}; S.seen.lowerAt = today(); save(); render(); },
-  noop: () => {},
+  noop: () => {}, ...XACT,
   jarX: d => { const k = d.v + ":" + d.id; VS.open[k] = !VS.open[k]; if (!VS.open[k] && VS.ask && VS.ask.id === d.id) VS.ask = null; render(); },
   jarAll: d => { VS.open["all:" + d.id] = true; render(); },
   mvEdit: d => moveModal(d.id, +d.i), mvSave: d => mvSave(d.id, +d.i), mvDel: d => mvSave(d.id, +d.i, true),
