@@ -475,6 +475,104 @@ details.phs .pt:first-of-type{border-top:0}
 .skipl{margin-top:14px}
 .confirm{margin-top:16px;padding:16px 18px;border-radius:14px;background:var(--acc2);border:1px solid color-mix(in srgb,var(--acc) 18%,transparent)}
 .confirm p{margin-bottom:12px;color:var(--ink2)}
+/* ------------------------------------------------ overview (command center) */
+.ov-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:28px;align-items:center;padding:26px 30px}
+.ov-hero .pair{display:flex;gap:30px;flex-wrap:wrap;margin-top:12px}
+.ov-hero .who{border:0;padding:0}
+.ov-hero.two .who+.who{border-left:1px solid color-mix(in srgb,var(--acc) 20%,transparent);padding-left:28px}
+.ov-hero .bignum{font-size:5.4rem}
+.ov-hero.two .bignum{font-size:4.2rem}
+.ov-hero .status{margin-top:0;max-width:none}
+.ov-hero .ovr>.status+.status{margin-top:12px}
+.ov-hero .nm{font-weight:500}
+.kpis{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin:0 0 22px;padding:0}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:13px 15px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.kpi[data-go]{cursor:pointer}
+.kpi[data-go]:hover,.tile[data-go]:hover{border-color:color-mix(in srgb,var(--acc) 35%,var(--line))}
+.kpi .lbl{font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kpi b{font-weight:500;font-size:1.32rem;line-height:1.25}
+.kpi .ks{font-size:.8rem;color:var(--ink3);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.kpi .ks .lnk{font-size:.8rem}
+.ov{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:stretch}
+.ov .tile{margin:0;display:flex;flex-direction:column;min-width:0}
+.ov .span2{grid-column:span 2}
+.tile[data-go]{cursor:pointer}
+.tile .ch{margin-bottom:14px}
+.tgo{color:var(--ink3);padding-top:4px}
+.tgo .ic{width:18px;height:18px}
+.tile .cap{margin-top:auto;padding-top:12px}
+.tempty{flex:1;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:12px;padding:18px 18px;border-radius:12px;background:var(--acc2);color:var(--ink2);font-size:.93rem;min-height:120px}
+.tile .list .item{padding:10px 2px}
+.donutw{display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.donut{flex:none}
+.donut .dc1{font-family:var(--serif);font-size:20px;fill:var(--ink)}
+.donut .dc2{font-family:var(--sans);font-size:11px;fill:var(--ink3)}
+.dleg{flex:1;min-width:150px;display:flex;flex-direction:column;gap:9px;font-size:.92rem}
+.dleg>div{display:flex;align-items:center;gap:9px}
+.dleg i{width:11px;height:11px;border-radius:3px;flex:none}
+.dleg b{font-weight:500}
+.jrs{display:flex;flex-direction:column;gap:12px}
+.jr .nm{font-weight:500;font-size:.95rem}
+.jr .num{font-size:.88rem}
+.track.jt{height:8px;margin:6px 0 3px}
+.track.jt i{background:var(--jar)}
+.subsum{display:flex;align-items:baseline;gap:4px;flex-wrap:wrap;margin-bottom:10px}
+.badge-rise{display:inline-flex;align-items:center;gap:6px;font-size:.86rem;color:var(--bad);background:var(--badbg);border-radius:999px;padding:4px 11px;margin-bottom:10px}
+.badge-rise .ic,.tile .meta .ic{width:15px;height:15px;vertical-align:-3px}
+@media (max-width:1179px){.ov{grid-template-columns:repeat(2,minmax(0,1fr))}.kpis{grid-template-columns:repeat(3,minmax(0,1fr))}.ov-hero{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:899px){.ov{grid-template-columns:minmax(0,1fr)}.ov .span2{grid-column:auto}.kpis{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.ov-hero{padding:22px 20px;gap:18px}.ov-hero .bignum{font-size:4.6rem}.ov-hero.two .who+.who{border-left:0;padding-left:0;border-top:1px solid color-mix(in srgb,var(--acc) 20%,transparent);padding-top:14px}.ov-hero .pair{flex-direction:column;gap:14px}.ov-hero.two .bignum{font-size:3.9rem}}
+.tile .list .cat{display:none}
+.tile .list .item .nm{white-space:normal}
+.jrs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 28px}
+@media (max-width:1179px){.ov .tile[data-tile="subs"]{grid-column:span 1}}
+@media (max-width:899px){.jrs{grid-template-columns:minmax(0,1fr)}}
+.kpis .lnk{margin:0;padding:0}
+.kpis>.kpi{height:100%}
+.topsubs{display:flex;flex-direction:column;gap:10px;margin-top:auto;padding-top:16px;font-size:.92rem}
+.topsubs .track.jt i{background:var(--c2)}
+/* jar history + list */
+.card.jar{flex-direction:column;align-items:stretch;gap:0}
+.jartop{display:flex;gap:22px;align-items:center;margin-bottom:16px}
+.card.jar.open{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-rows:auto 1fr;column-gap:40px;align-items:start}
+.card.jar.open .jartop{grid-column:1;grid-row:1}
+.card.jar.open .jx{grid-column:1;grid-row:2;margin-top:0}
+.card.jar.open .jpanels{grid-column:2;grid-row:1/3;margin-top:0;padding-left:40px;border-left:1px solid var(--line);margin-left:-40px}
+.jarinfo .isum{color:var(--ink2)}
+.jx{margin-top:auto;border-top:1px solid var(--line);padding-top:10px;cursor:default}
+.jxb{display:flex;gap:18px}
+.xp{display:inline-flex;align-items:center;gap:4px;border:0;background:none;padding:4px 0;font:inherit;font-size:.86rem;color:var(--ink3);cursor:pointer;letter-spacing:.02em}
+.xp .ic{width:14px;height:14px;transition:transform .2s}
+.xp:hover,.xp.on{color:var(--ink)}
+.xp.on .ic{transform:rotate(180deg)}
+.jpanels{display:flex;flex-direction:column;gap:28px;cursor:default}
+.jpanel h4{font-family:var(--serif);font-weight:400;font-size:1.15rem;margin:0 0 10px}
+.hist{display:flex;flex-direction:column}
+.hist .hr{display:flex;gap:12px;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--line);font-size:.92rem}
+.hist .hr:last-child{border-bottom:0}
+.hist .hr.click{cursor:pointer}
+.hist .hr.click:hover .hl2{text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line2)}
+.hist .hd{width:52px;flex:none;color:var(--ink3);font-size:.84rem}
+.hist .hl2{min-width:0;overflow-wrap:anywhere}
+.hist b{font-weight:500;white-space:nowrap}
+.hist b.neg{color:var(--ink2)}
+.ptot{display:flex;gap:26px;flex-wrap:wrap;margin-bottom:6px}
+.ptot>div{display:flex;flex-direction:column}
+.ptot .lbl{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3)}
+.ptot b{font-size:1.15rem;font-weight:500}
+.pst{margin:2px 0 10px;white-space:normal}
+.pst .lnk{font-size:.86rem;margin-left:4px;white-space:nowrap}
+.items{display:flex;flex-direction:column}
+.items .it{display:flex;gap:12px;align-items:center;padding:8px 0;border-bottom:1px solid var(--line)}
+.items .it .tick{width:26px;height:26px}
+.items .it .grow{min-width:0;cursor:pointer}
+.items .it .nm{font-weight:500;overflow-wrap:anywhere}
+.items .it b{font-weight:500;cursor:pointer}
+.items .it.done .nm{color:var(--ink3);text-decoration:line-through;text-decoration-color:var(--line2)}
+.items .it.done b{color:var(--ink3)}
+.items .ask{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between;padding:10px 12px;margin:6px 0 4px;border:1px solid var(--line2);border-radius:12px;font-size:.92rem;background:var(--bg2)}
+.jpanel .lnk .ic{width:15px;height:15px;vertical-align:-2px;margin-right:4px}
+@media (max-width:1100px){.card.jar.open{display:flex;align-items:stretch}.card.jar.open .jx{margin-top:0}.card.jar.open .jpanels{padding-left:0;border-left:0;margin:18px 0 0}}
+@media (max-width:760px){.jartop{gap:16px}.ptot{gap:18px}}
 </style></head>
 <body><div id="root"></div>
 <script>window.BP_DEMO=false;window.BP_SHOP="https://www.etsy.com/shop/TrueHavenStudios";window.BP_VERSION="1.0.0";</script>
@@ -1001,12 +1099,40 @@ const E = (() => {
   }
 
   // ------------------------------------------------------------ changes to the state (pure: today and ts passed in)
+  // ------------------------------------------------------------ jar history (display only – the money math stays in jarSim)
+  // automatic moves the ledger counts by today: paycheck fills (+) and the bill a jar paid (−)
+  const autoMoves = (j, s, today) => s.fills.filter(f => f.date <= today && f.amount > 0.004).map(f => ({ kind: "fill", date: f.date, amount: r2(f.amount), e: f.e }))
+    .concat(s.jarPays.filter(p => p.date <= today && p.amount > 0.004).map(p => ({ kind: "pay", date: p.date, amount: -r2(p.amount), e: p.e, bill: j.bill, due: p.due })));
+  const unlog = (j, f) => { j.log = (j.log || []).filter(l => !f(l)); };
+  // every move of one jar, newest first: frozen log + what the ledger counts since its base + hand-made adds/spends (i = index in history)
+  function jarLog(st, j, today) {
+    const s = jarSim(st, j, today, addMonths(today, 1)), out = [];
+    (j.log || []).forEach(l => out.push({ ...l }));
+    autoMoves(j, s, today).forEach(l => out.push(l));
+    (j.history || []).forEach((h, i) => out.push({ kind: h.amount >= 0 ? "add" : "spend", date: h.date, amount: r2(h.amount), note: h.note || "", ts: +h.ts || 0, i }));
+    // one line per bill date (two people paying their parts of it)
+    const m = []; out.forEach(l => { const p = l.kind === "pay" && m.find(x => x.kind === "pay" && x.due === l.due && x.bill === l.bill && x.date === l.date); if (p) p.amount = r2(p.amount + l.amount); else m.push(l); });
+    const rank = l => l.kind === "start" ? 0 : l.kind === "fill" ? 1 : l.kind === "pay" ? 3 : 2;
+    return m.sort((x, y) => x.date < y.date ? 1 : x.date > y.date ? -1 : rank(y) - rank(x) || (+y.ts || 0) - (+x.ts || 0));
+  }
+  // change (amount, note) or delete (amount === null) a hand-made add/spend. Everything is frozen first, so the entry is in both
+  // bases (jar and bills money); the difference then moves both by the same amount – never below zero in the jar
+  function editJarMove(st, j, i, amount, note, today, ts) {
+    const h = (j.history || [])[i]; if (!h) return 0;
+    rebaseAll(st, today, ts);
+    let d = amount === null ? -h.amount : r2(amount - h.amount);
+    d = r2(Math.max(-j.saved, d));
+    if (amount === null) j.history.splice(i, 1); else { h.amount = r2(amount); if (note !== undefined) h.note = String(note).slice(0, 60); }
+    j.saved = r2(j.saved + d); st.acct.amount = r2(st.acct.amount + d);
+    return d;
+  }
   // freeze every ledger at today's value so edits never re-count the past
   function rebaseAll(st, today, ts) {
-    const to = addMonths(today, HORIZON + 1), A = acct(st, today, to), jn = {};
-    (st.jars || []).forEach(j => { jn[j.id] = jarSim(st, j, today, to).now; });
+    const to = addMonths(today, HORIZON + 1), A = acct(st, today, to), jn = {}, js = {};
+    (st.jars || []).forEach(j => { js[j.id] = jarSim(st, j, today, to); jn[j.id] = js[j.id].now; });
     st.acct = { ...(st.acct || {}), amount: A.now, asOf: today, asTs: ts, edited: true };
-    (st.jars || []).forEach(j => { j.saved = jn[j.id]; j.asOf = today; j.asTs = ts; j.edited = true; });
+    // the paycheck fills and bill payments counted so far go into the jar's history before the base swallows them
+    (st.jars || []).forEach(j => { j.log = (j.log || []).concat(autoMoves(j, js[j.id], today)).slice(-600); j.saved = jn[j.id]; j.asOf = today; j.asTs = ts; j.edited = true; });
   }
   function compress(pays, amts) { const out = []; pays.forEach((d, i) => { const l = out[out.length - 1]; if (!l || l.amount !== amts[i]) out.push({ from: d, amount: amts[i] }); }); return out; }
   function setRates(e, pays, amts) { if (!pays.length) return; e.rates = (e.rates || []).filter(x => x.from < pays[0]).concat(compress(pays, amts)); }
@@ -1101,7 +1227,7 @@ const E = (() => {
       const newDates = occ(b, today, to); ticks.forEach((t, i) => { if (t && newDates[i]) b.paid[newDates[i]] = t; });
       b.ts = ts + 1;                                   // a new date that falls on today counts
       st.acct.amount = r2(st.acct.amount + back);
-      (st.jars || []).forEach(j => { if (jarBack[j.id]) j.saved = r2(j.saved + jarBack[j.id]); });
+      (st.jars || []).forEach(j => { if (jarBack[j.id]) { j.saved = r2(j.saved + jarBack[j.id]); unlog(j, l => l.kind === "pay" && l.due === today && l.bill === b.id); } });
     } else { const { next: _n, ...rest } = data; Object.assign(b, rest); }
     priceChange(b, oldAmt, +b.amount, today, oldFreq);
     if (oldCancel && !b.cancelBy) (st.gone = st.gone || []).push({ uid: `${b.id}-cancel@billsmoother.truehaven`, date: oldCancel, name: "Cancel " + b.name, seq: (+b.seq || 0) + 1 });
@@ -1125,7 +1251,7 @@ const E = (() => {
       if (newP.length) setRates(e, newP, newP.map((d, i) => i < oldAmt.length ? oldAmt[i] : tail));
       e.ts = ts + 1;                                   // a payday moved to today counts today
       st.acct.amount = r2(st.acct.amount - back);      // the old payday today didn't happen after all
-      (st.jars || []).forEach(j => { if (jarBack[j.id]) j.saved = r2(Math.max(0, j.saved - jarBack[j.id])); });
+      (st.jars || []).forEach(j => { if (jarBack[j.id]) { j.saved = r2(Math.max(0, j.saved - jarBack[j.id])); unlog(j, l => l.kind === "fill" && l.date === today && l.e === e.id); } });
     }
   }
   // take back a "paid" tick. A tick that a typed bank balance already reflects can't be taken back (update the balance instead);
@@ -1136,14 +1262,14 @@ const E = (() => {
     if (date > today) {
       const jp = jarPaidFor(st, b, date, today);
       if (tk <= (+st.acct.asTs || 0) && date > st.acct.asOf) st.acct.amount = r2(st.acct.amount + (+b.amount || 0));
-      (st.jars || []).forEach(j => { if (jp[j.id] && tk <= (+j.asTs || 0) && date > j.asOf) j.saved = r2(j.saved + jp[j.id]); });
+      (st.jars || []).forEach(j => { if (jp[j.id] && tk <= (+j.asTs || 0) && date > j.asOf) { j.saved = r2(j.saved + jp[j.id]); unlog(j, l => l.kind === "pay" && l.due === date && l.bill === b.id); } });
     }
     delete b.paid[date];
     return "ok";
   }
   // a new jar. Money "already saved" is new money in the bills account (like during setup) unless it's already in there
   function addJar(st, j, today, ts, alreadyInAccount) {
-    st.jars.push({ history: [], ...j, asOf: today, asTs: ts, edited: false, created: today, ts });
+    st.jars.push({ history: [], items: [], ...j, log: j.saved > 0 ? [{ kind: "start", date: today, amount: r2(j.saved) }] : [], asOf: today, asTs: ts, edited: false, created: today, ts });
     if (j.saved > 0 && !alreadyInAccount) st.acct.history.push({ date: today, amount: r2(j.saved), ts, note: "Saved for " + j.name });
   }
   // delete a bill; a jar that paid it is kept (filling a little each paycheck) or deleted
@@ -1187,7 +1313,7 @@ const E = (() => {
     tickTs, tickDay, isPaid, base, occInBase, occCounts, histInBase, histCounts,
     acct, jarSim, jarTarget, jarBill, jarCycles, smooth, phases, model, plan, breakdown, project, fixFor,
     rebaseAll, setRates, applyPlan, applyFix, priceChange, priceRise, ics, fold, yearDays, HORIZON,
-    editBill, editEarner, untick, addJar, deleteBill, endBill, jarAsk, tombstone };
+    editBill, editEarner, untick, addJar, jarLog, editJarMove, autoMoves, deleteBill, endBill, jarAsk, tombstone };
 })();
 if (typeof module !== "undefined") module.exports = E;
 
@@ -1239,7 +1365,15 @@ window.BP_SAMPLE = () => {
   st.bills.push(bill("Dentist", 460, "once", E.addDays(t, 40), "health", { ts: ts0 + 5e9 }));
   // they tick what they've paid; a little extra went into the Christmas jar
   st.bills.forEach(b => E.occ(b, st.planFrom, E.addDays(t, -2)).forEach((d, i) => { b.paid[d] = { ts: ts0 + 1e6 * (i + 1), day: d }; }));
-  jars[0].history.push({ date: E.addDays(c, 30), amount: 50, ts: ts0 + 2e9, note: "Birthday money" });
+  jars.forEach(j => { j.log = [{ kind: "start", date: c, amount: j.saved }]; j.items = []; });
+  jars[0].history.push({ date: E.addDays(c, 30), amount: 50, ts: ts0 + 2e9, note: "Birthday money from Grandma" });
+  jars[0].history.push({ date: E.addDays(t, -12), amount: -38, ts: ts0 + 3e9, note: "Puzzle for Leo" });
+  jars[0].history.push({ date: E.addDays(t, -5), amount: 25, ts: ts0 + 4e9, note: "Sold the old stroller" });
+  jars[2].history.push({ date: E.addDays(t, -20), amount: 120, ts: ts0 + 2.5e9, note: "Overtime bonus" });
+  const it = (who, what, price, bought, spent) => ({ id: "i" + (++k), who, what, price, bought: !!bought, spent: spent ? ts0 + 3e9 : 0 });
+  jars[0].items = [it("Mia", "Lego Friends set", 85, true), it("Leo", "Puzzle 1000 pcs", 38, true, true), it("Mom", "Cashmere scarf", 120), it("Dad", "Record player", 180),
+    it("Grandma", "Photo book", 45, true), it("Us", "Tree and decorations", 110)];
+  jars[2].items = [it("", "Flights", 1100), it("", "Hotel, 7 nights", 980), it("", "Car rental", 260)];
   return st;
 };
 
@@ -1309,7 +1443,9 @@ function migrate(s) {
     return { id: String(j.id || uid()), name: String(j.name || "Jar").slice(0, 40), mode, target: Math.max(0, fin(j.target)), date: ok(j.date) ? j.date : "", freq: ["yearly", "halfyearly", "quarterly"].includes(j.freq) ? j.freq : "yearly",
       per: Math.max(0, fin(j.per)), bill: mode === "bill" && out.bills.some(b => b.id === j.bill) ? j.bill : "", saved: Math.max(0, fin(j.saved)), asOf: ok(j.asOf) ? j.asOf : t,
       asTs: +j.asTs || 0, edited: j.edited !== false, created: ok(j.created) ? j.created : t, split: okSplit(j.split), ts: +j.ts || 0, kept: j.kept && typeof j.kept === "object" ? j.kept : {},
-      history: (Array.isArray(j.history) ? j.history : []).filter(h => h && ok(h.date) && isFinite(+h.amount)).map(h => ({ date: h.date, amount: E.r2(+h.amount), ts: +h.ts || 0, note: String(h.note || "") })) };
+      history: (Array.isArray(j.history) ? j.history : []).filter(h => h && ok(h.date) && isFinite(+h.amount)).map(h => ({ date: h.date, amount: E.r2(+h.amount), ts: +h.ts || 0, note: String(h.note || "") })),
+      log: (Array.isArray(j.log) ? j.log : []).filter(l => l && ok(l.date) && isFinite(+l.amount) && ["start", "fill", "pay", "adjust"].includes(l.kind)).map(l => ({ kind: l.kind, date: l.date, amount: E.r2(+l.amount), e: String(l.e || ""), bill: String(l.bill || ""), due: ok(l.due) ? l.due : "" })).slice(-600),
+      items: (Array.isArray(j.items) ? j.items : []).filter(x => x && (x.what || x.who)).map(x => ({ id: String(x.id || uid()), who: String(x.who || "").slice(0, 40), what: String(x.what || "").slice(0, 60), price: Math.max(0, fin(x.price)), bought: !!x.bought, spent: +x.spent || 0 })).slice(0, 200) };
   }).map(j => j.mode === "bill" && !j.bill ? { ...j, mode: "steady" } : j).map(j => (j.mode === "date" || j.mode === "repeat") && !j.date ? { ...j, mode: "steady" } : j);
   const a = out.acct;
   out.gone = out.gone.filter(g => typeof g.uid === "string" && ok(g.date)).slice(-400);
@@ -1395,7 +1531,7 @@ const IP = {
   gear: '<circle cx="12" cy="12" r="3"/><path d="M12 2.5v2.2M12 19.3v2.2M4.6 4.6l1.6 1.6M17.8 17.8l1.6 1.6M2.5 12h2.2M19.3 12h2.2M4.6 19.4l1.6-1.6M17.8 6.2l1.6-1.6"/>',
   plus: '<path d="M12 5v14M5 12h14"/>', check: '<path d="M5 12.5l4.5 4.5L19 7.5"/>', x: '<path d="M6 6l12 12M18 6L6 18"/>',
   edit: '<path d="M4 20h4L19 9l-4-4L4 16z"/>', trash: '<path d="M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3"/>',
-  left: '<path d="M15 6l-6 6 6 6"/>', right: '<path d="M9 6l6 6-6 6"/>', down: '<path d="M12 4v12M6 11l6 6 6-6M5 20h14"/>', up: '<path d="M12 20V8M6 13l6-6 6 6M5 4h14"/>',
+  left: '<path d="M15 6l-6 6 6 6"/>', right: '<path d="M9 6l6 6-6 6"/>', chev: '<path d="M6 9l6 6 6-6"/>', down: '<path d="M12 4v12M6 11l6 6 6-6M5 20h14"/>', up: '<path d="M12 20V8M6 13l6-6 6 6M5 4h14"/>',
   cal: '<rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/>', bell: '<path d="M6 16V11a6 6 0 0 1 12 0v5l1.5 2h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/>',
   alert: '<path d="M12 3.5 21.5 20h-19z"/><path d="M12 10v4.5M12 17.2v.3"/>', ok: '<circle cx="12" cy="12" r="9"/><path d="M8 12.3l2.7 2.7L16.2 9.5"/>',
   info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v5.5M12 7.8v.3"/>', undo: '<path d="M9 14L4 9l5-5"/><path d="M4 9h11a5 5 0 0 1 0 10h-3"/>',
@@ -1471,6 +1607,13 @@ function balChart(line, o) {
   }
   return s + "</svg>";
 }
+// donut: parts [{name, v, color}] – segments separated by a thin surface gap, total in the middle
+function donutSvg(parts, size, center = "") {
+  const tot = parts.reduce((a, p) => a + p.v, 0) || 1, sw = Math.round(size * .16), r = (size - sw) / 2 - 1, c = 2 * Math.PI * r, gap = parts.length > 1 ? 2 : 0;
+  let off = 0, segs = "";
+  parts.forEach(p => { const l = c * p.v / tot; if (l > gap) segs += `<circle cx="${size / 2}" cy="${size / 2}" r="${r.toFixed(1)}" fill="none" stroke="${p.color}" stroke-width="${sw}" stroke-dasharray="${(l - gap).toFixed(2)} ${c.toFixed(2)}" stroke-dashoffset="${(-off).toFixed(2)}" transform="rotate(-90 ${size / 2} ${size / 2})" data-tip="${esc(p.name + ": " + fmt0(p.v) + " a year · " + Math.round(p.v / tot * 100) + "%")}"/>`; off += l; });
+  return `<svg class="donut" width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" role="img" aria-label="Yearly cost by category"><circle cx="${size / 2}" cy="${size / 2}" r="${r.toFixed(1)}" fill="none" stroke="var(--bg2)" stroke-width="${sw}"/>${segs}${center}</svg>`;
+}
 // a jar that fills up
 function jarSvg(p, size = 92, id = "") {
   const k = "j" + (id || uid()), f = clamp(p, 0, 1), top = 23, bot = 106, lvl = bot - (bot - top) * f;
@@ -1491,6 +1634,7 @@ function showTip(t) {
 document.addEventListener("pointerover", e => showTip(e.target.closest && e.target.closest("[data-tip]")));
 document.addEventListener("pointerdown", e => { const t = e.target.closest && e.target.closest("[data-tip]"); if (t) showTip(t); else document.querySelectorAll(".tip").forEach(x => x.remove()); });
 addEventListener("scroll", () => document.querySelectorAll(".tip").forEach(x => x.remove()), { passive: true });
+addEventListener("resize", () => document.querySelectorAll(".tip").forEach(x => x.remove()));
 
 // ------------------------------------------------------------ theme
 function isDark() { const d = S.settings.dark; return d === "on" || (d === "auto" && matchMedia("(prefers-color-scheme: dark)").matches); }
@@ -1528,7 +1672,7 @@ function toast(msg, act, label = "Undo") {
 }
 
 // ------------------------------------------------------------ router
-const NAV = [["home", "Home", "home"], ["plan", "Plan", "plan"], ["bills", "Bills", "bill"], ["jars", "Jars", "jar"], ["subs", "Subscriptions", "repeat"], ["settings", "Settings", "gear"]];
+const NAV = [["home", "Overview", "home"], ["plan", "Plan", "plan"], ["bills", "Bills", "bill"], ["jars", "Jars", "jar"], ["subs", "Subscriptions", "repeat"], ["settings", "Settings", "gear"]];
 const ROUTES = NAV.map(x => x[0]);
 function route() { const r = (location.hash || "").replace(/^#\/?/, "").split("?")[0]; return ROUTES.includes(r) ? r : "home"; }
 function go(r) { if (location.hash === "#/" + r) render(); else location.hash = "#/" + r; }
@@ -1614,41 +1758,66 @@ function jarQuestions(m) {
 // ------------------------------------------------------------ home
 // pay that varies: the number is per week and a share of whatever comes in
 const irr = (pe, v) => pe.e.freq === "irregular" && pe.e.pay > 0 ? `<p class="herosub">a week – about ${Math.round(v * 52 / 12 / pe.e.pay * 100)}% of what comes in, or ${fmt0(v * 52 / 12)} a month</p>` : "";
+// tile width for charts: 3 columns on a wide screen, 2 in between, 1 on a phone
+const tileW = span => { const vw = Math.min(innerWidth, document.documentElement.clientWidth || innerWidth), cols = vw >= 1180 ? 3 : vw >= 900 ? 2 : 1, main = vw >= 900 ? Math.min(vw - 248, 1160) - 96 : vw - 32;
+  return Math.round(clamp((main - 20 * (cols - 1)) / cols * Math.min(span, cols) + 20 * (Math.min(span, cols) - 1) - (vw >= 900 ? 52 : 38), 250, 900)); };
+const tile = (key, title, body, o = {}) => `<section class="card tile ${o.span ? "span" + o.span : ""}" data-tile="${key}" ${o.go ? `data-go="${o.go}" role="link" tabindex="0"` : ""}><div class="ch"><div><h2>${o.icon ? ic(o.icon) : ""}${title}</h2>${o.sub ? `<p class="csub">${o.sub}</p>` : ""}</div>${o.go ? `<span class="tgo">${ic("right")}</span>` : ""}</div>${body}</section>`;
+const emptyT = (text, act = "", label = "") => `<div class="tempty"><p>${text}</p>${act ? btn(label, act, { cls: "sm", icon: "plus" }) : ""}</div>`;
 function vHome() {
-  const m = M(), P = m.plan, t = today(), st = status(m);
+  const m = M(), P = m.plan, t = today(), st = status(m), to = E.addMonths(t, 12), noBills = !S.bills.length;
   const then = c => c.then ? `then ${fmt0(c.then.amount)} from ${dshort(c.then.from)}` : "";
-  let hero;
-  if (P.earners.length === 1) {
-    const pe = P.earners[0], c = committed(pe);
-    hero = `<section class="hero"><div class="kick">${pe.e.freq === "irregular" ? "Set aside every week" : "Set aside from every paycheck"}</div><div class="heronum">${bigNum(c.now)}</div>${irr(pe, c.now)}
-      <p class="herosub">${pe.next ? (pe.next === t ? `Today's paycheck · ${dlong(pe.next)}` : `Next paycheck ${dlong(pe.next)}`) : "No paydays coming up"}${then(c) ? `<span class="sep">·</span>${then(c)}` : ""}</p>${statusBox(st)}${jarQuestions(m)}</section>`;
-  } else {
-    hero = `<section class="hero two"><div class="kick">Set aside from each paycheck</div><div class="pair">${P.earners.map(pe => { const c = committed(pe); return `<div class="who"><div class="nm">${esc(pe.e.name)} <span class="muted">· ${esc(schedText(pe.e))}</span></div><div class="heronum">${bigNum(c.now)}</div>${irr(pe, c.now)}
-      <p class="herosub">${pe.next === t ? "Today" : "Next"} · ${dlong(pe.next)}${then(c) ? `<br>${then(c)}` : ""}</p></div>`; }).join("")}</div>${statusBox(st)}${jarQuestions(m)}</section>`;
-  }
-  // mini radar
-  const to = E.addMonths(t, 12), pr = E.project(S, m, E.rateAt, to), eps = pr.eps;
+  // 1. the number – compact
+  const who = P.earners.map(pe => { const c = committed(pe); return `<div class="who"><div class="nm">${two() ? esc(pe.e.name) + ' <span class="muted">· ' + esc(schedText(pe.e)) + "</span>" : `${pe.next === t ? "Today's paycheck" : "Next paycheck"} <span class="muted">· ${dlong(pe.next)}</span>`}</div><div class="heronum">${bigNum(c.now)}</div>${irr(pe, c.now)}
+    <p class="herosub">${two() ? `${pe.next === t ? "Today" : "Next"} · ${dlong(pe.next)}` : ""}${then(c) ? `${two() ? "<br>" : ""}${then(c)}` : ""}</p></div>`; }).join("");
+  const hero = `<section class="hero ov-hero ${two() ? "two" : ""}"><div class="ovl"><div class="kick">${P.earners.length === 1 && P.earners[0].e.freq === "irregular" ? "Set aside every week" : two() ? "Set aside from each paycheck" : "Set aside from every paycheck"}</div><div class="pair">${who}</div></div><div class="ovr">${statusBox(st)}${jarQuestions(m)}</div></section>`;
+  // 2. key numbers
+  const live = S.bills.filter(b => !b.end || b.end >= t), perYear = E.sum(live, b => E.perYear(b));
+  const pays = E.sum(S.earners, e => E.annualPay(e)), payKnown = S.earners.length && S.earners.every(e => e.pay > 0);
+  const pr24 = E.project(S, m, E.rateAt, m.to), firstDip = pr24.dips[0];
+  const covered = noBills ? "–" : firstDip ? Math.max(0, Math.floor(E.diff(t, firstDip.date) / 30.44)) + " mo" : "24+ mo";
+  const kpi = (lbl, v, sub = "", go = "") => `<div class="kpi" ${go ? `data-go="${go}" role="link" tabindex="0"` : ""}><span class="lbl">${lbl}</span><b class="num">${v}</b><span class="ks">${sub}</span></div>`;
+  const kpis = `<div class="kpis money">
+    ${kpi("Set aside now", fmt0(m.totalNow), `<button class="lnk" data-act="balModal">Update</button>`)}
+    ${kpi("In jars", fmt0(m.jarsNow), plural(S.jars.length, "jar"), "jars")}
+    ${m.freeNow < -0.5 ? kpi("Still to come in", fmt0(-m.freeNow), "you're catching up") : kpi("For bills", fmt0(m.freeNow), "outside the jars")}
+    ${kpi("Bills a year", noBills ? "–" : fmt0(perYear), noBills ? "no bills yet" : `${fmt0(perYear / 12)} a month`, "bills")}
+    ${kpi("Of your pay", payKnown && pays > 0 && !noBills ? Math.round(perYear / pays * 100) + "%" : "–", payKnown ? "goes to bills" : `<a class="lnk" href="#/settings">Add take-home pay</a>`)}
+    ${kpi("Covered ahead", covered, noBills ? "add bills first" : firstDip ? `short ${dshort(firstDip.date)}` : "every bill, every date", "plan")}
+  </div>`;
+  // 3. tiles
+  const pr = E.project(S, m, E.rateAt, to), eps = pr.eps;
   const low = pr.line.reduce((a, p) => Math.min(a, p.low ?? p.bal), Infinity), lowP = pr.line.find(p => (p.low ?? p.bal) === low);
-  const radar = card("Next 12 months", `<div class="chartbox" data-chart="mini">${balChart(pr.line, { w: chartWidth(innerWidth >= 1100 ? .58 : 1), h: 150, from: t, to, eps, small: true, label: "Bills money over the next 12 months" })}</div>
-    <p class="cap">${eps.length ? `${ic("alert", "bad")}<span class="grow">A short spot around ${dshort(eps[0].lowDate)} – the box above fixes it.</span>` : `Lowest point ${fmt0(low)} on ${dshort(lowP ? lowP.date : t)} – never below zero.`} <a href="#/plan" class="lnk">Crunch radar</a></p>`, { sub: "Bills money after each payday and bill · jars not included", cls: "radar-mini", icon: "plan" });
-  // coming up
-  const soon = upcoming(21), shown = soon.slice(0, 7);
-  const up = card("Coming up", soon.length ? `<div class="list">${shown.map(o => billRow(o.b, o.date, true)).join("")}</div>${soon.length > shown.length ? `<p class="cap">${plural(soon.length - shown.length, "more bill")} in the next three weeks · <a href="#/bills" class="lnk">All bills</a></p>` : ""}` : `<p class="empty">Nothing due in the next three weeks.</p>`, { right: `<a href="#/bills" class="lnk">All bills</a>`, icon: "cal" });
-  // what the next paycheck covers – adds up to the plan's number for it
-  const nx = [...P.earners].filter(pe => pe.pays.length).sort((a, b) => a.next < b.next ? -1 : 1)[0];
-  let covers = "";
-  if (nx) {
-    const p = nx.pays[0], c = committed(nx), open = VS.open.covers, parts = open ? p.parts : p.parts.slice(0, 6), more = p.parts.length - parts.length;
-    covers = card(`${two() ? esc(nx.e.name) + "'s" : "Your"} next paycheck`, `<p class="csub" style="margin:-6px 0 12px">${dlong(p.date)} · what your plan puts aside, and where it goes</p><div class="parts">${parts.map(x => `<div class="pt"><span class="grow">${esc(x.name)}${x.kind === "jar" ? ` <span class="tag">jar</span>` : ""}</span><span class="num">${x.amount < 0 ? "−" + fmt(-x.amount) : fmt(x.amount)}</span></div>`).join("")}
-      ${more > 0 ? `<div class="pt"><button class="lnk" data-act="openCovers">Show ${plural(more, "more line")} (${fmt(E.sum(p.parts.slice(6), x => x.amount))})</button></div>` : ""}
-      ${p.amount - p.raw > 0.004 ? `<div class="pt muted"><span class="grow">Rounded up</span><span class="num">${fmt(p.amount - p.raw)}</span></div>` : ""}
-      <div class="pt tot"><span class="grow">Your plan for this paycheck</span><span class="num">${fmt0(p.amount)}</span></div>
-      ${Math.abs(c.now - p.amount) >= 1 ? `<div class="pt muted"><span class="grow">You set aside now</span><span class="num">${fmt0(c.now)}</span></div>` : ""}</div>`, { icon: "bill" });
-  }
-  const third = m.freeNow < -0.5 ? `<div><span class="lbl">Still to come in</span><b class="num">${fmt0(-m.freeNow)}</b><span class="tiny muted">You're catching up – your next paychecks fill this</span></div>` : `<div><span class="lbl">For bills</span><b class="num">${fmt0(m.freeNow)}</b></div>`;
-  const bal = `<div class="money"><div><span class="lbl">Set aside now</span><b class="num">${fmt0(m.totalNow)}</b></div><div><span class="lbl">In jars</span><b class="num">${fmt0(m.jarsNow)}</b></div>${third}<button class="lnk" data-act="balModal">Update</button></div>`;
-  return `${hero}${bal}<div class="grid g2 mt start"><div class="col">${radar}${covers}</div>${up}</div>`;
+  const outlook = tile("outlook", "Next 12 months", noBills ? emptyT("Your 12-month outlook appears here once you add a bill.", "newBill", "Add a bill") :
+    `<div class="chartbox">${balChart(pr.line, { w: tileW(2), h: 245, from: t, to, eps, small: true, label: "Bills money over the next 12 months" })}</div>
+    <p class="cap">${eps.length ? `${ic("alert", "bad")}<span class="grow">A short spot around ${dshort(eps[0].lowDate)} – the box above fixes it.</span>` : `${ic("ok", "okc")}<span class="grow">Lowest point ${fmt0(low)} on ${dshort(lowP ? lowP.date : t)} – never below zero.</span>`}</p>`,
+    { span: 2, icon: "plan", sub: "Bills money after each payday and bill · jars not included", go: "plan" });
+  const soon = upcoming(30).slice(0, 5);
+  const coming = tile("coming", "Coming up", soon.length ? `<div class="list">${soon.map(o => billRow(o.b, o.date, true)).join("")}</div>` : emptyT(noBills ? "Your next bills show up here, with a circle to tick them off." : "Nothing due in the next 30 days.", noBills ? "newBill" : "", "Add a bill"), { icon: "cal", go: "bills" });
+  const rp = radarPeriods(m, to, true);
+  const flow_ = tile("flow", "Bills vs. what you set aside", noBills ? emptyT("Lumpy bills on one side, a smooth amount from every paycheck on the other – that's the idea. Add a bill to see yours.") :
+    `<div class="legend"><span><i class="sw due"></i>Bills due</span><span><i class="sw aside"></i>You set aside</span></div><div class="chartbox">${barsLine(rp.per, { w: tileW(2), h: 250, label: "Bills due and money set aside per month" })}</div>`,
+    { span: 2, icon: "bill", sub: "Per month · the bars are lumpy, what you set aside stays smooth", go: "plan" });
+  // where the money goes: the 3 biggest categories in the theme's validated colours, the rest folded into "Other"
+  const byCat = {}; live.forEach(b => { byCat[b.cat] = (byCat[b.cat] || 0) + E.perYear(b); });
+  const cats = Object.entries(byCat).filter(x => x[1] > 0).sort((a, b) => b[1] - a[1]);
+  const parts = cats.slice(0, 3).map(([c, v], i) => ({ name: catOf(c).name, v, color: `var(--c${i + 1})` }));
+  if (cats.length > 3) parts.push({ name: "Other", v: E.sum(cats.slice(3), x => x[1]), color: "color-mix(in srgb,var(--ink3) 40%,var(--card))" });
+  const dsz = innerWidth < 420 ? 128 : 140;
+  const where = tile("where", "Where the money goes", noBills ? emptyT("A simple breakdown of your yearly bills by category appears here.") :
+    `<div class="donutw">${donutSvg(parts, dsz, `<text x="50%" y="47%" text-anchor="middle" class="dc1">${esc(fmtk_(perYear))}</text><text x="50%" y="61%" text-anchor="middle" class="dc2">a year</text>`)}
+    <div class="dleg">${parts.map(p => `<div><i style="background:${p.color}"></i><span class="grow">${esc(p.name)}</span><b class="num">${Math.round(p.v / perYear * 100)}%</b></div>`).join("")}</div></div>`,
+    { icon: "dot", go: "plan" });
+  const jarRows = S.jars.slice(0, 6).map(j => { const s_ = m.jars[j.id], T = s_.T, p = T > 0 ? clamp(s_.now / T, 0, 1) : 0;
+    return `<div class="jr"><div class="row sb"><span class="nm">${esc(j.name)}</span><span class="num muted">${fmt0(s_.now)} <span class="faint">of ${fmt0(T)}</span></span></div><span class="track jt"><i style="width:${(p * 100).toFixed(1)}%"></i></span><div class="meta">${Math.round(p * 100)}%${s_.nextCycle ? " · " + dshort(s_.nextCycle) : j.mode === "steady" ? " · little by little" : ""}${(j.items || []).some(x => x.bought) ? ` · ${j.items.filter(x => x.bought).length} of ${plural(j.items.length, itemNoun(j))} bought` : ""}</div></div>`; }).join("");
+  const jars = tile("jars", "Jars", S.jars.length ? `<div class="jrs">${jarRows}</div>${S.jars.length > 6 ? `<p class="cap">${plural(S.jars.length - 6, "more jar")}</p>` : ""}` : emptyT("Jars fill a little from every paycheck – Christmas, the car, a trip.", "newJar", "New jar"), { icon: "jar", go: "jars", span: 2, sub: S.jars.length ? `${fmt0(m.jarsNow)} saved · fills from every paycheck` : "" });
+  const subs = S.bills.filter(b => b.cat === "subs" && (!b.end || b.end >= t)), subY = E.sum(subs, b => E.perYear(b)), rises = subs.map(b => E.priceRise(b)).filter(Boolean), cb = cancelSoon().sort((a, b) => a.cancelBy < b.cancelBy ? -1 : 1)[0];
+  const subT = tile("subs", "Subscriptions", subs.length ? `<div class="subsum">${serifMoney(subY)}<span class="muted"> a year · ${plural(subs.length, "subscription")}</span></div>
+    ${rises.length ? `<p class="badge-rise">${ic("up")}Prices up ${fmt0(E.sum(rises, r => r.perYear))} a year</p>` : ""}
+    ${cb ? `<p class="meta">${ic("bell")} Cancel ${esc(cb.name)} by ${dshort(cb.cancelBy)}</p>` : `<p class="meta">No cancel-by dates coming up.</p>`}
+    <div class="topsubs">${[...subs].sort((a, b) => E.perYear(b) - E.perYear(a)).slice(0, 3).map((b, i, arr) => `<div><div class="row sb"><span>${esc(b.name)}</span><span class="num muted">${fmt0(E.perYear(b))}/yr</span></div><span class="track jt"><i style="width:${(E.perYear(b) / E.perYear(arr[0]) * 100).toFixed(1)}%"></i></span></div>`).join("")}</div>` : emptyT("Add streaming, music, apps or the gym to see what they really cost a year."), { icon: "repeat", go: "subs" });
+  return `${hero}${kpis}<div class="ov">${outlook}${coming}${flow_}${where}${subT}${jars}</div>`;
 }
+const fmtk_ = v => Math.abs(v) >= 10000 ? fk(v) : fmt0(v);
 // bills due in the next n days plus anything not ticked from the last 30
 function upcoming(n) {
   const t = today(), out = [], pf = S.planFrom || t;
@@ -1662,9 +1831,9 @@ function billRow(b, date, showDate) {
 }
 
 // ------------------------------------------------------------ plan
-function radarPeriods(m, to) {
+function radarPeriods(m, to, monthly) {
   const t = today(), pr = E.project(S, m, E.rateAt, to), pays = [...new Set(pr.ev.filter(x => x.kind === "pay").map(x => x.date))].sort();
-  const byPay = pays.length > 0 && pays.length <= 30, bills = m.acct.fut.filter(x => x.kind === "bill" && x.date <= to), per = [];
+  const byPay = !monthly && pays.length > 0 && pays.length <= 30, bills = m.acct.fut.filter(x => x.kind === "bill" && x.date <= to), per = [];
   const shortIn = (a, b) => pr.dips.some(d => d.date >= a && d.date <= b);
   const aside = (a, b) => E.sum(pr.ev.filter(x => x.kind === "pay" && x.date >= a && x.date <= b), x => x.v);
   const due = (a, b) => E.sum(bills.filter(x => x.date >= a && x.date <= b), x => -x.v);
@@ -1792,13 +1961,50 @@ function vJars() {
     else if (j.mode === "steady") { when = `${fmt0(j.per)} per paycheck`; state = s.now >= T - 0.5 ? "Full – it tops itself up after you spend" : `${fmt0(T - s.now)} to go`; }
     else if (j.mode === "repeat") { when = `${j.freq === "yearly" ? "Every year" : j.freq === "halfyearly" ? "Every 6 months" : "Every 3 months"} · ${s.nextCycle ? dyear(s.nextCycle) : ""}`; state = s.nextCycle ? (s.atCycle >= T - 0.5 ? `Full by ${dshort(s.nextCycle)}` : `${fmt0(s.atCycle || 0)} by ${dshort(s.nextCycle)}`) : ""; }
     else { when = j.date ? `By ${dyear(j.date)}` : ""; state = j.date < t ? (s.now > 0.5 ? "Its date has passed – spend it or set a new date" : "Done") : s.atCycle >= T - 0.5 ? `Full by ${dshort(j.date)}` : `${fmt0(s.atCycle || 0)} by ${dshort(j.date)}`; }
-    return `<section class="card jar click" data-act="editJar" data-id="${j.id}"><div class="jarvis">${jarSvg(p, 104, j.id)}<span class="pct num">${Math.round(clamp(p, 0, 9.99) * 100)}%</span></div>
+    const open = VS.open["h:" + j.id] || VS.open["p:" + j.id];
+    return `<section class="card jar click ${open ? "open" : ""}" data-act="editJar" data-id="${j.id}"><div class="jartop"><div class="jarvis">${jarSvg(p, 104, j.id)}<span class="pct num">${Math.round(clamp(p, 0, 9.99) * 100)}%</span></div>
       <div class="jarinfo"><h3>${esc(j.name)}</h3><div class="jarnum">${serifMoney(s.now)}<span class="of">of ${fmt0(T)}</span></div>
       <p class="meta">${when}</p>${state ? `<p class="meta st">${state}</p>` : ""}${per > 0.004 ? `<p class="meta">+${fmt(per)} from the next paycheck</p>` : ""}
-      <div class="row gap8 mt8">${btn("Add", "jarAdd", { cls: "sm", data: { id: j.id } })}${btn("Spend", "jarSpend", { cls: "sm", data: { id: j.id } })}</div></div></section>`;
+      ${itemSum(j, T)}
+      <div class="row gap8 mt8">${btn("Add", "jarAdd", { cls: "sm", data: { id: j.id } })}${btn("Spend", "jarSpend", { cls: "sm", data: { id: j.id } })}</div></div></div>${jarMore(j, s, T)}</section>`;
   }).join("");
   const sub = `${fmt0(m.jarsNow)} in ${plural(S.jars.length, "jar")}${S.earners.length ? ` · ${S.earners.map((e, i) => `${two() ? esc(e.name) + " " : ""}+${fmt0(perPay[i])} next paycheck`).join(" · ")}` : ""}`;
   return `${head("Jars", sub, acts)}<div class="jars">${cards}</div>`;
+}
+
+// the jar's list in one line ("6 gifts · $578 planned of $800 · 3 bought")
+function itemSum(j, T) {
+  const it = j.items || []; if (!it.length) return "";
+  const pl = E.sum(it, x => x.price), b = it.filter(x => x.bought).length;
+  return `<p class="meta isum">${plural(it.length, itemNoun(j))} · ${fmt0(pl)} planned${T > 0 ? " of " + fmt0(T) : ""}${b ? ` · ${b} bought` : ""}</p>`;
+}
+// History and the list, collapsed under the card
+function jarMore(j, s, T) {
+  const hO = !!VS.open["h:" + j.id], pO = !!VS.open["p:" + j.id], g = itemNoun(j) === "gift";
+  const tg = (v, l, on) => `<button class="xp ${on ? "on" : ""}" data-act="jarX" data-v="${v}" data-id="${j.id}" aria-expanded="${on}">${l}${ic("chev")}</button>`;
+  let body = "";
+  if (hO) {
+    const log = E.jarLog(S, j, today()), all = VS.open["all:" + j.id], rows = all ? log : log.slice(0, 5);
+    const lbl = l => l.kind === "fill" ? "Paycheck" + (two() ? " · " + esc((S.earners.find(e => e.id === l.e) || { name: "" }).name) : "") : l.kind === "pay" ? "Paid " + esc((S.bills.find(b => b.id === l.bill) || { name: "the bill" }).name) : l.kind === "start" ? "Starting amount" : l.kind === "adjust" ? "Balance corrected" : l.note ? esc(l.note) : l.kind === "add" ? "Added" : "Spent";
+    body += `<div class="jpanel"><h4>History</h4>${log.length ? `<div class="hist">${rows.map(l => { const man = l.i !== undefined;
+      return `<div class="hr ${man ? "click" : ""}" ${man ? `data-act="mvEdit" data-id="${j.id}" data-i="${l.i}" role="button" tabindex="0" title="Change or delete"` : ""}><span class="hd num">${dshort(l.date)}</span><span class="hl2 grow">${lbl(l)}${man && l.note ? `<span class="muted"> · ${l.kind === "add" ? "added" : "spent"}</span>` : ""}</span><b class="num ${l.amount < 0 ? "neg" : ""}">${l.amount < 0 ? "−" : "+"}${fmt(Math.abs(l.amount))}</b></div>`; }).join("")}</div>
+      ${!all && log.length > 5 ? `<button class="lnk mt8" data-act="jarAll" data-id="${j.id}">Show all ${log.length}</button>` : ""}` : `<p class="meta">Nothing yet – paycheck fills show up here from the next payday.</p>`}</div>`;
+  }
+  if (pO) {
+    const it = j.items || [], pl = E.r2(E.sum(it, x => x.price)), left = E.r2(E.sum(it.filter(x => !x.bought), x => x.price)), now_ = s.now, n = itemNoun(j);
+    const vsT = !it.length || !(T > 0) ? "" : pl < T - 0.5 ? `<b>${fmt0(T - pl)}</b> left after all ${n}s` : pl > T + 0.5 ? `<b class="badc">${fmt0(pl - T)}</b> over the target` : "Matches the target";
+    const by = s.nextCycle && s.atCycle != null ? s.atCycle : null;
+    const vsJ = !it.length ? "" : left < 0.5 ? `Everything's bought` : now_ >= left - 0.5 ? `The jar covers the ${fmt0(left)} still to buy` : by !== null && by >= left - 0.5 ? `${fmt0(left)} still to buy – the jar has it by ${dshort(s.nextCycle)}` : `${fmt0(left)} still to buy · ${fmt0(left - (by !== null ? by : now_))} more than the jar ${by !== null ? "will hold by " + dshort(s.nextCycle) : "holds"}`;
+    const ask = VS.ask && VS.ask.id === j.id ? it.find(x => x.id === VS.ask.iid) : null;
+    body += `<div class="jpanel"><h4>${g ? "Gift list" : "Plan"}</h4>${it.length ? `<div class="ptot"><div><span class="lbl">Planned</span><b class="num">${fmt0(pl)}</b></div><div><span class="lbl">Target</span><b class="num">${fmt0(T)}</b></div><div><span class="lbl">In the jar</span><b class="num">${fmt0(now_)}</b></div></div>
+      <p class="meta pst">${[vsT, vsJ].filter(Boolean).join(" · ")}${!j.bill && Math.abs(pl - T) > 0.5 && pl > 0 ? ` <button class="lnk" data-act="planTarget" data-id="${j.id}">Set target to ${fmt0(pl)}</button>` : ""}</p>
+      <div class="items">${it.map(x => `<div class="it ${x.bought ? "done" : ""}"><button class="tick ${x.bought ? "on" : ""}" role="checkbox" aria-checked="${x.bought}" aria-label="${x.bought ? "Bought – tap to undo" : "Mark as bought"}" data-act="itTick" data-id="${j.id}" data-i="${x.id}">${ic("check")}</button>
+        <div class="grow click" data-act="itEdit" data-id="${j.id}" data-i="${x.id}" role="button" tabindex="0"><div class="nm">${esc(x.what)}</div>${x.who ? `<div class="meta">For ${esc(x.who)}</div>` : ""}</div><b class="num click" data-act="itEdit" data-id="${j.id}" data-i="${x.id}">${x.price > 0 ? fmt0(x.price) : "–"}</b></div>
+        ${ask && ask.id === x.id ? `<div class="ask"><span>Spend ${fmt(Math.min(x.price, now_))} from the jar for it?</span><span class="row gap8">${btn("Spend " + fmt(Math.min(x.price, now_)), "itSpend", { cls: "sm pri", data: { id: j.id, i: x.id } })}${btn("Not now", "itNo", { cls: "sm ghost" })}</span></div>` : ""}`).join("")}</div>` :
+      `<p class="meta">List what the money is for${g ? " – who gets what, and the price" : " – flights, hotel, tyres"} – and see if the target fits.</p>`}
+      <button class="lnk mt8" data-act="itNew" data-id="${j.id}">${ic("plus")}${g ? "Add a gift" : "Add an item"}</button></div>`;
+  }
+  return `<div class="jx" data-act="noop"><div class="jxb">${tg("h", "History", hO)}${tg("p", g ? "Gift list" : "Plan", pO)}</div></div>${body ? `<div class="jpanels" data-act="noop">${body}</div>` : ""}`;
 }
 
 // ------------------------------------------------------------ subscriptions
@@ -1958,7 +2164,7 @@ function saveJar(id) {
   const data = { name: name.slice(0, 40), mode: JMODE, target: JMODE === "bill" ? 0 : E.r2(target), date: JMODE === "date" || JMODE === "repeat" ? date : "", freq: val("jF") || "yearly", per: JMODE === "steady" ? E.r2(per) : 0, bill: JMODE === "bill" ? billId : "", split: JMODE === "bill" ? { mode: "shared" } : readSplit("jS_") };
   const t = today();
   commit(() => {
-    if (id) { rebase(); const j = S.jars.find(x => x.id === id); Object.assign(j, data); j.saved = E.r2(saved); }
+    if (id) { rebase(); const j = S.jars.find(x => x.id === id), d = E.r2(saved - j.saved); Object.assign(j, data); j.saved = E.r2(saved); if (Math.abs(d) > 0.004) (j.log = j.log || []).push({ kind: "adjust", date: t, amount: d }); }
     else E.addJar(S, { id: uid(), saved: E.r2(saved), ...data }, t, now(), !!($("#jIn") || {}).checked);
   }, id ? "edit jar" : "add jar");
   closeModal(); toast(id ? "Saved." : `${esc(name)} jar added – it fills from your next paycheck.`, () => undo());
@@ -2051,6 +2257,74 @@ function tuOk() {
   const v = num(val("tuA")); if (!(v > 0)) return bad("Type an amount.");
   commit(() => { S.acct.history.push({ date: today(), amount: E.r2(v), ts: now(), note: "Added" }); }, "add money");
   closeModal(); toast(`${fmt(v)} added to your bills money.`, () => undo());
+}
+
+// ------------------------------------------------------------ jar history: change or delete a hand-made add / spend
+function moveModal(id, i) {
+  const j = S.jars.find(x => x.id === id), h = j && j.history[i]; if (!h) return;
+  const sp = h.amount < 0;
+  modal(sp ? "Spent from " + esc(j.name) : "Added to " + esc(j.name), `<div class="amountview"><input id="mvA" inputmode="decimal" autocomplete="off" aria-label="Amount" value="${esc(String(Math.abs(h.amount)))}"></div>
+    ${field("Note (optional)", inp("mvN", h.note, { ph: sp ? "Gifts, repair…" : "Birthday money, bonus…" }))}<p class="help">${dlong(h.date)}. Changing it moves your bills money by the same amount.</p>`,
+    `<button class="btn ghost danger" data-act="mvDel" data-id="${id}" data-i="${i}">${ic("trash")}Delete</button><button class="btn pri" data-act="mvSave" data-id="${id}" data-i="${i}">Save</button>`);
+}
+function mvSave(id, i, del) {
+  const j = S.jars.find(x => x.id === id), h = j && j.history[i]; if (!h) return;
+  if (del && noDemoDelete()) return;
+  const sp = h.amount < 0, a = del ? 0 : num(val("mvA"));
+  if (!del && !(a > 0)) return bad("Type an amount.");
+  if (!del && sp && a > E.r2(M().jars[id].now - h.amount) + 0.004) return bad(`There's only ${fmt(M().jars[id].now - h.amount)} for this in the jar.`);
+  commit(() => { E.editJarMove(S, j, +i, del ? null : (sp ? -E.r2(a) : E.r2(a)), del ? undefined : val("mvN").trim(), today(), now()); }, del ? "delete entry" : "edit entry");
+  closeModal(); toast(del ? "Entry deleted." : "Saved.", () => undo());
+}
+
+// ------------------------------------------------------------ jar plan: what the money is for
+const itemNoun = j => /christmas|xmas|gift|birthday|present|holiday season/i.test(j.name) ? "gift" : "item";
+function itemModal(id, iid) {
+  const j = S.jars.find(x => x.id === id); if (!j) return;
+  const x = (j.items || []).find(y => y.id === iid), n = itemNoun(j), g = n === "gift";
+  modal(x ? "Edit " + n : (g ? "Add a gift" : "Add an item"), `${field("What", inp("itW", x ? x.what : "", { ph: g ? "Lego set, scarf…" : "Flights, hotel, tyres…", auto: true }))}
+    ${field(g ? "For" : "For (optional)", inp("itF", x ? x.who : "", { ph: g ? "Mia" : "Who or what it's for" }))}
+    ${field("Price", moneyInp("itP", x ? x.price : "", { ph: symbol() + "0" }))}`,
+    `${x ? `<button class="btn ghost danger" data-act="itDel" data-id="${id}" data-i="${x.id}">${ic("trash")}Delete</button>` : ""}<button class="btn pri" data-act="itSave" data-id="${id}" data-i="${x ? x.id : ""}">${x ? "Save" : "Add"}</button>`);
+}
+function itSave(id, iid) {
+  const j = S.jars.find(x => x.id === id); if (!j) return;
+  const what = val("itW").trim(), who = val("itF").trim(), p = val("itP").trim() === "" ? 0 : num(val("itP"));
+  if (!what) return bad("What is it?");
+  if (!isFinite(p) || p < 0) return bad("The price doesn't look right.");
+  commit(() => {
+    j.items = j.items || [];
+    const x = j.items.find(y => y.id === iid);
+    if (x) Object.assign(x, { what: what.slice(0, 60), who: who.slice(0, 40), price: E.r2(p) });
+    else j.items.push({ id: uid(), what: what.slice(0, 60), who: who.slice(0, 40), price: E.r2(p), bought: false, spent: 0 });
+  }, iid ? "edit item" : "add item");
+  VS.open["p:" + id] = true; closeModal();
+}
+function itDel(id, iid) {
+  const j = S.jars.find(x => x.id === id); if (!j) return;
+  commit(() => { j.items = j.items.filter(y => y.id !== iid); }, "delete item");
+  closeModal(); toast("Removed from the list.", () => undo());
+}
+// ticking "bought" never moves money by itself – it asks
+function itTick(id, iid) {
+  const j = S.jars.find(x => x.id === id), x = j && (j.items || []).find(y => y.id === iid); if (!x) return;
+  const on = !x.bought;
+  commit(() => { x.bought = on; }, on ? "bought" : "not bought");
+  VS.ask = on && x.price > 0 && !x.spent && M().jars[id].now > 0.5 ? { id, iid } : null; render();
+}
+function itSpend(id, iid) {
+  const j = S.jars.find(x => x.id === id), x = j && (j.items || []).find(y => y.id === iid); VS.ask = null; if (!x) return render();
+  const have = E.r2(M().jars[id].now), a = Math.min(E.r2(x.price), have);
+  if (!(a > 0)) { render(); return toast(`There's nothing in ${esc(j.name)} yet.`); }
+  const ts = now();
+  commit(() => { j.history.push({ date: today(), amount: -a, ts, note: (x.what + (x.who ? " for " + x.who : "")).slice(0, 60) }); x.spent = ts; }, "spend from jar");
+  toast(`${fmt(a)} spent from ${esc(j.name)}${a < x.price - 0.004 ? " (all that was in it)" : ""}.`, () => undo());
+}
+function planTarget(id) {
+  const j = S.jars.find(x => x.id === id); if (!j || j.bill) return;
+  const tot = E.r2(E.sum(j.items || [], y => y.price)); if (!(tot > 0)) return;
+  commit(() => { rebase(); j.target = tot; }, "target");
+  toast(`${esc(j.name)} now saves for ${fmt0(tot)}.`, () => undo());
 }
 
 /* onboarding: welcome -> you -> household -> pay (each person) -> bills -> jars -> money & theme -> your number */
@@ -2240,6 +2514,7 @@ function obFinish() {
   s.jars = OB.jars.filter(j => num(j.target) > 0).map(j => ({ id: uid(), ts: ts0, name: String(j.name).trim().slice(0, 40), mode: j.mode, target: E.r2(num(j.target)), date: j.mode === "steady" ? "" : j.date, freq: "yearly",
     per: j.mode === "steady" ? E.r2(num(j.per)) : 0, bill: "", saved: E.r2(Math.max(0, num(j.saved) || 0)), asOf: t, asTs: ts0, edited: false, created: t, history: [], split: { mode: "shared" } }));
   const bal = Math.max(0, num(OB.bal) || 0);
+  s.jars.forEach(j => { j.items = []; j.log = j.saved > 0 ? [{ kind: "start", date: t, amount: j.saved }] : []; });
   s.acct = { amount: E.r2(bal + E.sum(s.jars, j => j.saved)), asOf: t, asTs: ts0, edited: false, history: [] };
   // the plan starts with the first paycheck from today; bills before it are paid the usual way
   s.planFrom = s.earners.map(e => E.payDates(e, t, E.addMonths(t, 3))[0] || e.next).sort()[0] || t;
@@ -2254,6 +2529,7 @@ function obFinish() {
 const VIEWS = { home: vHome, plan: vPlan, bills: vBills, jars: vJars, subs: vSubs, settings: vSettings };
 let lastRoute = null;
 function render() {
+  document.querySelectorAll(".tip").forEach(x => x.remove());
   applyTheme();
   const root = $("#root");
   if (!S.setup && !DEMO) { root.innerHTML = vOnboard(); obRefresh(); lastRoute = null; const f = root.querySelector("[autofocus]"); if (f && matchMedia("(min-width:761px)").matches) f.focus(); return; }
@@ -2336,6 +2612,13 @@ const ACT = {
   },
   openBd: () => { VS.open.bd = true; render(); }, openCovers: () => { VS.open.covers = true; render(); },
   notNow: () => { S.seen = S.seen || {}; S.seen.lowerAt = today(); save(); render(); },
+  noop: () => {},
+  jarX: d => { const k = d.v + ":" + d.id; VS.open[k] = !VS.open[k]; if (!VS.open[k] && VS.ask && VS.ask.id === d.id) VS.ask = null; render(); },
+  jarAll: d => { VS.open["all:" + d.id] = true; render(); },
+  mvEdit: d => moveModal(d.id, +d.i), mvSave: d => mvSave(d.id, +d.i), mvDel: d => mvSave(d.id, +d.i, true),
+  itNew: d => itemModal(d.id), itEdit: d => itemModal(d.id, d.i), itSave: d => itSave(d.id, d.i), itDel: d => itDel(d.id, d.i),
+  itTick: d => itTick(d.id, d.i), itSpend: d => itSpend(d.id, d.i), itNo: () => { VS.ask = null; render(); },
+  planTarget: d => planTarget(d.id),
   jarUsed: d => { const j = S.jars.find(x => x.id === d.id), q = j && E.jarAsk(S, j, M()); if (!q) return render(); commit(() => { j.history.push({ date: today(), amount: -q.amount, ts: now(), note: "Used" }); }, "jar used"); toast(`${esc(j.name)} is empty again and fills up for next time.`, () => undo()); },
   jarKeep: d => { const j = S.jars.find(x => x.id === d.id); if (!j) return; commit(() => { j.kept = { ...(j.kept || {}), [d.d]: true }; }, "keep jar"); toast("Kept – the money stays in the jar.", () => undo()); },
   undo: () => undo()
@@ -2343,6 +2626,8 @@ const ACT = {
 
 document.addEventListener("click", e => {
   const a = e.target.closest("[data-act]");
+  // a tile or number that leads to its detail page (buttons and links inside it win)
+  if (!a && !e.target.closest("a")) { const g = e.target.closest("[data-go]"); if (g) { go(g.dataset.go); return; } }
   if (!a) { if (e.target.closest(".tabbar a, .side a")) document.querySelectorAll(".tip").forEach(x => x.remove()); return; }
   const f = ACT[a.dataset.act]; if (!f) return;
   // the tick circle sits inside a clickable row: only tick
@@ -2355,7 +2640,7 @@ document.addEventListener("keydown", e => {
   if (e.key === "Enter" && OB && !S.setup && !modalOpen && e.target.tagName === "INPUT" && e.target.closest(".onboard")) { e.preventDefault(); obCollect(); const b = $(".obnext"); if (b && !b.disabled) b.click(); else { const c = obCheck(OB.step); Object.keys(c.errs).forEach(k => { OB.touched[k] = true; }); obRefresh(); } return; }
   if (e.key === "Enter" && modalOpen && e.target.tagName === "INPUT") { const p = modalOpen.querySelector(".mf .btn.pri"); if (p) { e.preventDefault(); p.click(); } }
   if ((e.ctrlKey || e.metaKey) && e.key === "z" && !/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName) && !modalOpen) { e.preventDefault(); undo(); }
-  if ((e.key === "Enter" || e.key === " ") && e.target.matches && e.target.matches(".item.click, .tr.click, .card.click, .sub.click")) { e.preventDefault(); e.target.click(); }
+  if ((e.key === "Enter" || e.key === " ") && e.target.matches && e.target.matches(".item.click, .tr.click, .card.click, .sub.click, [data-go]")) { e.preventDefault(); e.target.click(); }
 });
 document.addEventListener("change", e => {
   const el = e.target;
